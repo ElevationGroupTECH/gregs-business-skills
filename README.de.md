@@ -1,4 +1,4 @@
-[🇬🇧 English](README.md) | 🇩🇪 Deutsch
+[🇬🇧 English](README.md) | **🇩🇪 Deutsch**
 
 <p align="center">
   <img src="assets/gregs-business-skills-hero.png" alt="Greg's Business Skills" width="700">
