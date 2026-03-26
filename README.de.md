@@ -50,18 +50,42 @@ Installier beide. Dein zukünftiges Ich wird es dir danken.
 
 ## Installation
 
+### 🟢 Weg 1: Am einfachsten (funktioniert IMMER)
+
+**Schritt 1:** Dateien herunterladen
+- Klicke oben den grünen **"Code"**-Button → **"Download ZIP"**
+- ZIP-Datei entpacken (liegt dann in deinem Downloads-Ordner)
+
+**Schritt 2:** Sage Claude:
+> "Installiere die Skills aus ~/Downloads/gregs-business-skills-main/plugins/"
+
+Fertig. Claude findet die SKILL.md-Dateien und kopiert sie dahin, wo sie hingehören.
+
+**Oder manuell kopieren:**
+```
+plugins/projekt-starten/skills/projekt-starten/SKILL.md  →  ~/.claude/commands/projekt-starten.md
+plugins/projekt-review/skills/projekt-review/SKILL.md    →  ~/.claude/commands/projekt-review.md
+```
+
+Dann Claude Code neu starten oder `/commands` eingeben zum Prüfen.
+
+### 🔵 Weg 2: Automatisch (ab Claude Code 1.0.33+)
+
+> ⚠️ Benötigt Claude Code Version 1.0.33 oder neuer.
+> Prüfen mit: `claude --version` | Aktualisieren mit: `claude update`
+
 ```bash
-# Skill-Marketplace hinzufügen (einmalig)
+# Marketplace registrieren (einmalig)
 /plugin marketplace add ElevationGroupTECH/gregs-business-skills
 
-# Greg's Project Cockpit installieren
-/plugin install projekt-starten     # Deutsch
-/plugin install projekt-review      # Deutsch
-
-# Or in English
-/plugin install project-kickoff     # English
-/plugin install project-review      # English
+# Installieren
+/plugin install projekt-starten@gregs-business-skills     # Deutsch
+/plugin install projekt-review@gregs-business-skills      # Deutsch
+/plugin install project-kickoff@gregs-business-skills     # English
+/plugin install project-review@gregs-business-skills      # English
 ```
+
+Falls das nicht funktioniert → Weg 1 nutzen.
 
 Dann einfach `/projekt-starten` oder `/projekt-review` in einer beliebigen Claude-Code-Session starten.
 

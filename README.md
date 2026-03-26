@@ -49,17 +49,39 @@ Install both. Your future self will thank you.
 
 ## Installation
 
+### 🟢 The Easy Way (always works)
+
+**Step 1:** Download the files
+- Click the green **"Code"** button above → **"Download ZIP"**
+- Unzip the file
+
+**Step 2:** Tell Claude:
+> "Install the skills from ~/Downloads/gregs-business-skills-main/plugins/"
+
+Done. Claude finds the SKILL.md files and puts them where they belong.
+
+**Or copy them manually:**
+```
+plugins/project-kickoff/skills/project-kickoff/SKILL.md  →  ~/.claude/commands/project-kickoff.md
+plugins/project-review/skills/project-review/SKILL.md    →  ~/.claude/commands/project-review.md
+```
+
+Then restart Claude Code or type `/commands` to verify.
+
+### 🔵 The Auto Way (Claude Code 1.0.33+)
+
+> ⚠️ Requires Claude Code version 1.0.33 or newer.
+> Check with: `claude --version` | Update with: `claude update`
+
 ```bash
-# Add the skill marketplace (one time)
+# Register marketplace (one time)
 /plugin marketplace add ElevationGroupTECH/gregs-business-skills
 
-# Install Greg's Project Cockpit
-/plugin install project-kickoff     # English
-/plugin install project-review      # English
-
-# Oder auf Deutsch
-/plugin install projekt-starten     # Deutsch
-/plugin install projekt-review      # Deutsch
+# Install
+/plugin install project-kickoff@gregs-business-skills     # English
+/plugin install project-review@gregs-business-skills      # English
+/plugin install projekt-starten@gregs-business-skills     # Deutsch
+/plugin install projekt-review@gregs-business-skills      # Deutsch
 ```
 
 Then just run `/project-kickoff` or `/project-review` in any Claude Code session.
