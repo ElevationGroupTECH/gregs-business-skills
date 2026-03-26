@@ -63,6 +63,30 @@ Hit 9+? You get a celebration. You've earned it.
 
 ---
 
+## Better Together
+
+These two skills are a pair — like inhaling and exhaling.
+
+```
+   /project-kickoff                    /project-review
+   ┌──────────────┐                   ┌──────────────┐
+   │  START RIGHT  │ ──→ Work ──→    │  STAY RIGHT   │
+   │              │                   │              │
+   │  Structure   │                   │  Score       │
+   │  Description │                   │  Fix         │
+   │  Changelog   │                   │  Polish      │
+   │  CLAUDE.md   │                   │  Celebrate   │
+   └──────────────┘                   └──────────────┘
+          ↑                                  │
+          └──────── Keep working ←───────────┘
+```
+
+**`/project-kickoff`** sets up a clean foundation. **`/project-review`** keeps it clean as the project grows. Without review, every project turns into a jungle. Without a good kickoff, there's nothing worth reviewing. Together, they form a cycle that keeps Claude effective across weeks and months of work.
+
+Install both. Your future self will thank you.
+
+---
+
 ## Installation
 
 ```bash

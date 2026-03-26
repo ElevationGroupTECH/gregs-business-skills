@@ -63,6 +63,31 @@ Score 9+ erreicht? Du bekommst eine Celebration. Hast du dir verdient.
 
 ---
 
+## Besser zusammen
+
+Diese zwei Skills sind ein Paar — wie Einatmen und Ausatmen.
+
+```
+   /projekt-starten                   /projekt-review
+   ┌──────────────┐                   ┌──────────────┐
+   │ SAUBER       │                   │ SAUBER       │
+   │ STARTEN      │ ──→ Arbeiten ──→ │ HALTEN       │
+   │              │                   │              │
+   │ Struktur     │                   │ Score        │
+   │ Beschreibung │                   │ Fixen        │
+   │ Protokoll    │                   │ Polieren     │
+   │ CLAUDE.md    │                   │ Feiern       │
+   └──────────────┘                   └──────────────┘
+          ↑                                  │
+          └──────── Weiterarbeiten ←─────────┘
+```
+
+**`/projekt-starten`** legt ein sauberes Fundament. **`/projekt-review`** hält es sauber, während das Projekt wächst. Ohne Review verwildert jedes Projekt zum Dschungel. Ohne guten Start gibt's nichts, was sich zu reviewen lohnt. Zusammen bilden sie einen Kreislauf, der Claude über Wochen und Monate produktiv hält.
+
+Installier beide. Dein zukünftiges Ich wird es dir danken.
+
+---
+
 ## Installation
 
 ```bash
