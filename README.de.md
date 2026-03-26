@@ -1,7 +1,7 @@
 [🇬🇧 English](README.md) | **🇩🇪 Deutsch**
 
 <p align="center">
-  <img src="assets/gregs-business-skills-hero.png" alt="Greg's Business Skills" width="700">
+  <img src="assets/gregs-business-skills-hero.png" alt="Greg's Business Skills" width="280">
 </p>
 
 # Greg's Business Skills
