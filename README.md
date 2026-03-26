@@ -28,17 +28,15 @@ These skills are automated context engineering. You talk for 30 seconds, and Cla
 Your first skill bundle. Two skills that belong together like inhaling and exhaling:
 
 ```
-   /project-kickoff                    /project-review
-   ┌──────────────┐                   ┌──────────────┐
-   │  START RIGHT  │ ──→ Work ──→    │  STAY RIGHT   │
-   │              │                   │              │
-   │  Structure   │                   │  Score       │
-   │  Description │                   │  Fix         │
-   │  Changelog   │                   │  Polish      │
-   │  CLAUDE.md   │                   │  Celebrate   │
-   └──────────────┘                   └──────────────┘
-          ↑                                  │
-          └──────── Keep working ←───────────┘
+  /project-kickoff              /project-review
+  ┌────────────────┐            ┌────────────────┐
+  │ START RIGHT    │            │ STAY RIGHT     │
+  │                │            │                │
+  │ Structure      │ ────────>  │ Score          │
+  │ Description    │   Work     │ Fix            │
+  │ Changelog      │ <────────  │ Polish         │
+  │ CLAUDE.md      │            │ Celebrate      │
+  └────────────────┘            └────────────────┘
 ```
 
 **`/project-kickoff`** sets up a clean foundation. **`/project-review`** keeps it clean as the project grows. Without review, every project turns into a jungle. Without a good kickoff, there's nothing worth reviewing.

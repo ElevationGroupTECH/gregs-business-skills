@@ -28,18 +28,16 @@ Diese Skills sind automatisiertes Context Engineering. Du redest 30 Sekunden, un
 Dein erstes Skill-Bundle. Zwei Skills, die zusammengehören wie Einatmen und Ausatmen:
 
 ```
-   /projekt-starten                   /projekt-review
-   ┌──────────────┐                   ┌──────────────┐
-   │ SAUBER       │                   │ SAUBER       │
-   │ STARTEN      │ ──→ Arbeiten ──→ │ HALTEN       │
-   │              │                   │              │
-   │ Struktur     │                   │ Score        │
-   │ Beschreibung │                   │ Fixen        │
-   │ Protokoll    │                   │ Polieren     │
-   │ CLAUDE.md    │                   │ Feiern       │
-   └──────────────┘                   └──────────────┘
-          ↑                                  │
-          └──────── Weiterarbeiten ←─────────┘
+  /projekt-starten              /projekt-review
+  ┌────────────────┐            ┌────────────────┐
+  │ SAUBER         │            │ SAUBER         │
+  │ STARTEN        │            │ HALTEN         │
+  │                │ ────────>  │                │
+  │ Struktur       │ Arbeiten   │ Score          │
+  │ Beschreibung   │ <────────  │ Fixen          │
+  │ Protokoll      │            │ Polieren       │
+  │ CLAUDE.md      │            │ Feiern         │
+  └────────────────┘            └────────────────┘
 ```
 
 **`/projekt-starten`** legt ein sauberes Fundament. **`/projekt-review`** hält es sauber, während das Projekt wächst. Ohne Review verwildert jedes Projekt zum Dschungel. Ohne guten Start gibt's nichts, was sich zu reviewen lohnt.
