@@ -6,18 +6,18 @@
 
 # Greg's Business Skills
 
-**Most people use Claude like it's the cleaning lady next door. These skills turn it into your project manager.**
+**Like Neo downloading kung fu in The Matrix — except it's business skills. Plug in, download structure, go.**
 
 </td>
 </tr></table>
 
 Ever started a new project and spent 20 minutes explaining context to Claude — only to do it all over again next session? Or opened a project folder after two weeks and had zero clue where you left off?
 
-Whether you know the type or you ARE the type: 147 files on the desktop. "Final_v3_FINAL_really-final.docx". A project folder that looks like a digital junk drawer. No judgment — we've all been there.
+Whether you know the type or you ARE the type: 147 files on the desktop, including "Final_v3_FINAL_really-final-no-seriously-this-time-superfinal.docx". And then you wonder why Claude starts calling you "Hugo"...
 
 Here's the thing: **Claude is only as good as the context you give it.** That's called context engineering — and it's the difference between an AI that calls you "Hugo" and one that knows your project better than you do.
 
-These skills are automated context engineering. You just talk — and Claude turns it into a project structure that still works after weeks and months. No context loss. No "Where were we again?". Even with large projects.
+These skills are automated context engineering. You just talk — and Claude turns it into a project structure that still works after weeks and months. Claude stays with you through large projects all the way to the finish line — and only calls people "Hugo" who are actually named Hugo.
 
 ---
 
@@ -25,7 +25,7 @@ These skills are automated context engineering. You just talk — and Claude tur
 
 **Start projects right. Keep them right.**
 
-Your first skill bundle. Two skills that belong together like inhaling and exhaling:
+Your first skill bundle. Two skills for structure lovers and excellence seekers:
 
 ```
   /project-kickoff              /project-review
