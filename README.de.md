@@ -12,7 +12,9 @@ Schon mal ein neues Projekt gestartet und 20 Minuten damit verbracht, Claude den
 
 Du kennst den Typ. 47 Dateien auf dem Desktop. "Entwurf_v3_FINAL_wirklich-final.docx". Ein Projektordner, der aussieht wie eine digitale Rumpelkammer.
 
-Hier ist die Sache: **Claude ist nur so gut wie der Kontext, den du ihm gibst.** Gib ihm ein sauberes Projekt-Setup mit klarer Dokumentation, und es wird ein komplett anderes Werkzeug. Genau das machen diese Skills — in etwa 30 Sekunden.
+Hier ist die Sache: **Claude ist nur so gut wie der Kontext, den du ihm gibst.** Das nennt sich Context Engineering — und es ist der Unterschied zwischen einer KI die dich mit "Hugo" anspricht und einer die dein Projekt besser kennt als du selbst.
+
+Diese Skills sind automatisiertes Context Engineering. Du redest 30 Sekunden, und Claude hat eine Projektstruktur, die auch nach Wochen und Monaten noch funktioniert. Keine Context-Verluste. Kein "Wo waren wir nochmal?". Selbst bei großen Projekten.
 
 ---
 
@@ -174,7 +176,9 @@ Apache 2.0 — nutzen, anpassen, teilen.
 
 ## Über uns
 
-Gebaut von **[Teile Deine Botschaft](https://www.teiledeinebotschaft.de)** (TDB) — wir helfen Coaches, Beratern und Solo-Unternehmern, ihr Online-Business aufzubauen, ohne Technik-Experte werden zu müssen.
+Gebaut von **[Teile Deine Botschaft](https://www.teiledeinebotschaft.de)** (TDB). Diese Skills stammen von Gregor Dorsch — Strukturnerd, Context-Engineering-Fetischist und der Typ, der lieber 2 Stunden an einer CLAUDE.md feilt als 20 Minuten in einem chaotischen Projekt zu arbeiten.
+
+Struktur ist King für Context Engineering. Und diese Skills sind Gregors Art, das automatisiert an jeden weiterzugeben.
 
 > *Entstanden aus hunderten Stunden echtem Projektarbeiten mit Claude. Keine Theorie — so arbeiten wir wirklich jeden Tag.*
 

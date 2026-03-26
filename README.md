@@ -12,7 +12,9 @@ Ever started a new project and spent 20 minutes explaining context to Claude —
 
 You know the type. 47 files on the desktop. "Final_v3_FINAL_really-final.docx". A project folder that looks like a digital junk drawer.
 
-Here's the thing: **Claude is only as good as the context you give it.** Give it a clean project setup with clear documentation, and it becomes a completely different tool. These skills do that in about 30 seconds.
+Here's the thing: **Claude is only as good as the context you give it.** That's called context engineering — and it's the difference between an AI that calls you "Hugo" and one that knows your project better than you do.
+
+These skills are automated context engineering. You talk for 30 seconds, and Claude has a project structure that still works after weeks and months. No context loss. No "Where were we again?". Even with large projects.
 
 ---
 
@@ -173,7 +175,9 @@ Apache 2.0 — use it, modify it, share it.
 
 ## About
 
-Built by **[Teile Deine Botschaft](https://www.teiledeinebotschaft.de)** (TDB) — we help coaches, consultants, and solo entrepreneurs build their online business without needing to become tech experts.
+Built by **[Teile Deine Botschaft](https://www.teiledeinebotschaft.de)** (TDB). These skills come from Gregor Dorsch — structure nerd, context engineering obsessive, and the kind of person who'd rather spend 2 hours perfecting a CLAUDE.md than 20 minutes working in a messy project.
+
+Structure is king for context engineering. And these skills are Greg's way of automating that for everyone.
 
 > *Built from hundreds of hours of real project work with Claude. Not theory — this is how we actually work every day.*
 
