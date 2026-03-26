@@ -1,10 +1,10 @@
 {
-  "name": "claude-business-skills",
-  "displayName": "Claude Business Skills",
-  "description": "Professional project management skills for Claude Code. Set up projects with proper structure, track progress, and keep everything polished.",
+  "name": "gregs-business-skills",
+  "displayName": "Greg's Business Skills",
+  "description": "Professional business skills for Claude Code. Start projects right, keep them polished, run your business like a pro.",
   "author": "ElevationGroupTECH",
   "homepage": "https://www.teiledeinebotschaft.de",
-  "repository": "https://github.com/ElevationGroupTECH/claude-business-skills",
+  "repository": "https://github.com/ElevationGroupTECH/gregs-business-skills",
   "license": "Apache-2.0",
   "languages": ["de", "en"],
   "plugins": [

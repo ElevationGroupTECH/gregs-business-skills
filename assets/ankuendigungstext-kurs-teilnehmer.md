@@ -18,14 +18,14 @@ Ihr kennt den `/projekt-starten` Skill, den einige von euch schon ausprobiert ha
 
 **Installation (Copy-Paste):**
 ```
-/plugin marketplace add ElevationGroupTECH/claude-business-skills
+/plugin marketplace add ElevationGroupTECH/gregs-business-skills
 /plugin install projekt-starten
 /plugin install projekt-review
 ```
 
 Fertig. Danach einfach `/projekt-starten` oder `/projekt-review` in Claude Code eintippen.
 
-👉 GitHub-Repo: https://github.com/ElevationGroupTECH/claude-business-skills
+👉 GitHub-Repo: https://github.com/ElevationGroupTECH/gregs-business-skills
 
 Viel Spaß damit! Feedback gerne hier in der Gruppe.
 
@@ -33,7 +33,7 @@ Viel Spaß damit! Feedback gerne hier in der Gruppe.
 
 ## Ausführliche Version (Memberbereich / E-Mail)
 
-### Neues Update: Claude Business Skills — jetzt als Open Source! 🎉
+### Neues Update: Greg's Business Skills — jetzt als Open Source! 🎉
 
 Einige von euch kennen bereits den `/projekt-starten` Skill, der aus einem chaotischen Brainstorming ein sauber strukturiertes Projekt macht. Der hat sich in der Praxis so bewährt, dass wir jetzt das **komplette Paket** als Open Source veröffentlicht haben.
 
@@ -56,7 +56,7 @@ Beide Skills gibt's auf **Deutsch und Englisch**.
 
 ```bash
 # 1. Marketplace hinzufügen (einmalig)
-/plugin marketplace add ElevationGroupTECH/claude-business-skills
+/plugin marketplace add ElevationGroupTECH/gregs-business-skills
 
 # 2. Skills installieren
 /plugin install projekt-starten
@@ -67,7 +67,7 @@ Dann einfach `/projekt-starten` oder `/projekt-review` in einer Claude-Code-Sess
 
 **Tipp:** Probiert `/projekt-review` mal auf einem eurer bestehenden Projekte aus. Der Score ist manchmal überraschend ehrlich 😄
 
-👉 **GitHub-Repo:** https://github.com/ElevationGroupTECH/claude-business-skills
+👉 **GitHub-Repo:** https://github.com/ElevationGroupTECH/gregs-business-skills
 
 Feedback, Fragen, Bugs? Gerne hier posten oder direkt als Issue auf GitHub.
 
