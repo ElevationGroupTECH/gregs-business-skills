@@ -1,12 +1,15 @@
 **🇬🇧 English** | [🇩🇪 Deutsch](README.de.md)
 
-<p align="center">
-  <img src="assets/gregs-business-skills-hero.png" alt="Greg's Business Skills" width="280">
-</p>
+<table><tr>
+<td width="160"><img src="assets/gregs-business-skills-hero.png" alt="Greg's Business Skills" width="140"></td>
+<td>
 
 # Greg's Business Skills
 
 **Most people use Claude like it's the cleaning lady next door. These skills turn it into your project manager.**
+
+</td>
+</tr></table>
 
 Ever started a new project and spent 20 minutes explaining context to Claude — only to do it all over again next session? Or opened a project folder after two weeks and had zero clue where you left off?
 

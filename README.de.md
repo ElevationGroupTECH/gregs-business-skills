@@ -1,12 +1,15 @@
 [🇬🇧 English](README.md) | **🇩🇪 Deutsch**
 
-<p align="center">
-  <img src="assets/gregs-business-skills-hero.png" alt="Greg's Business Skills" width="280">
-</p>
+<table><tr>
+<td width="160"><img src="assets/gregs-business-skills-hero.png" alt="Greg's Business Skills" width="140"></td>
+<td>
 
 # Greg's Business Skills
 
 **Die meisten nutzen Claude wie die Putzfrau von nebenan. Diese Skills machen daraus deinen Projektmanager.**
+
+</td>
+</tr></table>
 
 Schon mal ein neues Projekt gestartet und 20 Minuten damit verbracht, Claude den Kontext zu erklären — nur um das in der nächsten Session nochmal zu machen? Oder einen Projektordner nach zwei Wochen geöffnet und keine Ahnung gehabt, wo du aufgehört hast?
 
