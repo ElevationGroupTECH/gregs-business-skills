@@ -13,7 +13,7 @@
 
 Schon mal ein neues Projekt gestartet und 20 Minuten damit verbracht, Claude den Kontext zu erklären — nur um das in der nächsten Session nochmal zu machen? Oder einen Projektordner nach zwei Wochen geöffnet und keine Ahnung gehabt, wo du aufgehört hast?
 
-Du kennst den Typ. 47 Dateien auf dem Desktop. "Entwurf_v3_FINAL_wirklich-final.docx". Ein Projektordner, der aussieht wie eine digitale Rumpelkammer.
+Du kennst den Typ. 147 Dateien auf dem Desktop. "Entwurf_v3_FINAL_wirklich-final.docx". Ein Projektordner, der aussieht wie eine digitale Rumpelkammer.
 
 Hier ist die Sache: **Claude ist nur so gut wie der Kontext, den du ihm gibst.** Das nennt sich Context Engineering — und es ist der Unterschied zwischen einer KI die dich mit "Hugo" anspricht und einer die dein Projekt besser kennt als du selbst.
 

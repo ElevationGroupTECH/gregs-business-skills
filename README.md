@@ -13,7 +13,7 @@
 
 Ever started a new project and spent 20 minutes explaining context to Claude — only to do it all over again next session? Or opened a project folder after two weeks and had zero clue where you left off?
 
-You know the type. 47 files on the desktop. "Final_v3_FINAL_really-final.docx". A project folder that looks like a digital junk drawer.
+You know the type. 147 files on the desktop. "Final_v3_FINAL_really-final.docx". A project folder that looks like a digital junk drawer.
 
 Here's the thing: **Claude is only as good as the context you give it.** That's called context engineering — and it's the difference between an AI that calls you "Hugo" and one that knows your project better than you do.
 
