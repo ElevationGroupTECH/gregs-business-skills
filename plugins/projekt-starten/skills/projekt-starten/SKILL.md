@@ -5,9 +5,46 @@ description: Neues Projekt sauber aufsetzen — Struktur, Beschreibung, Protokol
 
 # Projekt Starten
 
-Dieser Skill richtet ein neues Projekt ordentlich ein — mit Projektbeschreibung, Protokolldatei, CLAUDE.md und sauberer Struktur. Basiert auf der Methodik aus "KI im Onlinebusiness Session 04" (Gregor Dorsch, 16.03.2026).
+Dieser Skill richtet ein neues Projekt sauber ein — mit Projektbeschreibung, Protokolldatei, CLAUDE.md und ordentlicher Struktur. Basiert auf der Methodik aus „KI im Onlinebusiness Session 04" (Gregor Dorsch, 16.03.2026).
 
-> **Teil eines Paares:** Dieser Skill startet Projekte sauber. Sein Partner `/projekt-review` hält sie sauber — mit Hochglanz-Score, automatischen Fixes und ehrlichem Feedback. Zusammen bilden sie einen Kreislauf: Starten → Arbeiten → Review → Aufräumen → Weiterarbeiten.
+> **Teil eines Paares:** Dieser Skill startet Projekte sauber. Sein Partner `/projekt-review` (Alias `/review-project`) hält sie sauber — mit Hochglanz-Score, automatischen Fixes und ehrlichem Feedback. Zusammen bilden sie einen Kreislauf: Starten → Arbeiten → Review → Aufräumen → Weiterarbeiten.
+
+---
+
+## 🎯 Leitprinzip: Impact / Ressourcen (verbindlich für jedes hier gestartete Projekt)
+
+**Bevor irgendetwas angelegt wird — dieses Entscheidungsprinzip ist der Kompass für alles, was im Skill folgt. Der Skill funktioniert eigenständig — alle nötigen Definitionen stehen hier drin.**
+
+```
+Wert = Impact (Auswirkung auf das Geschäftsziel) ÷ Ressourcen (Geld + Zeit + Emotionen)
+```
+
+### Drei Ressourcen-Dimensionen — bei jeder Aufgabenbewertung mitdenken
+
+1. **💰 Geld** — Lizenzen, Tools, externe Dienstleister, Anschaffungen
+2. **⏰ Zeit** — Gregor, Nadine, Team, Wartung, Übergabe, Lernkurve
+3. **💚 Emotionen** — Nerv-Faktor, Frust, Energie. **Die am häufigsten unterschätzte Ressource.** Wenn Arbeit nervt oder ein Setup fragil und kompliziert ist, zerstört das mehr Wert, als jede Geld-Ersparnis je bringen kann.
+
+### Impact-Hierarchie
+
+- 🚀 **Riesen-Impact** (3-10× Wirkung): rein in den Plan, fast egal was es kostet
+- ⚡ **Mittel + Low Hanging Fruit**: mitnehmen, wenn Claude es allein/automatisiert kann
+- 🐭 **Homöopathisch** (<5%): lassen, auch wenn technisch elegant
+
+### Zusatzfilter
+
+- **Frau-Test:** Könnte Nadine das im Notfall ohne Gregor bedienen? → wenn nein, Komplexität reduzieren.
+- **Compound-Effekte:** Manche Hebel multiplizieren sich (SEO × Content × Backlinks). Die zuerst.
+- **Opportunitätskosten:** Was machen wir NICHT, wenn wir das machen?
+- **Whole-System-Optimierung:** Wirkt das aufs ganze System, oder nur auf eine Komponente, die eh schon gut war?
+- **Wer macht die Arbeit?** Gregor/Nadine = teuer. Claude = nachts kostenlos. Automatisiert > einmalig.
+
+### Konsequenz für jedes neu angelegte Projekt
+
+- Aufgabentabellen enthalten eine Spalte **„Aufwand"** (3-dimensionale Bewertung) zusätzlich zu den bestehenden Spalten
+- Die CLAUDE.md jedes Projekts referenziert das Prinzip oben (oberster Filter-Abschnitt)
+- Aufgaben-Priorisierung: Riesen-Impact > Compound-Effekt > Low-Hanging-Fruit > Rest
+- Empfehlungen werden durch die CEO-Brille gefiltert, BEVOR sie ausgesprochen werden: „Was würde ein CEO denken, nicht ein Nerd?"
 
 ---
 
@@ -17,7 +54,7 @@ Dieser Skill richtet ein neues Projekt ordentlich ein — mit Projektbeschreibun
 
 1. **Frage nach dem Projektordner:**
    - Wurde ein Pfad als Argument übergeben? → Diesen verwenden
-   - Sonst: "In welchem Ordner soll das Projekt leben? Gib mir den Pfad, oder sag mir, wo es thematisch hingehört (z.B. Marketing, Produkte, Kunden), dann schlage ich einen Platz in deiner Firmenstruktur vor."
+   - Sonst: „In welchem Ordner soll das Projekt leben? Gib mir den Pfad, oder sag mir, wo es thematisch hingehört (z.B. Marketing, Produkte, Kunden), dann schlage ich einen Platz in deiner Firmenstruktur vor."
    - Falls der Ordner noch nicht existiert: Anlegen (nach Bestätigung)
 
 2. **In den Projektordner wechseln** und dort arbeiten.
@@ -29,7 +66,7 @@ Dieser Skill richtet ein neues Projekt ordentlich ein — mit Projektbeschreibun
 Das ist der wichtigste Schritt. Der User wird typischerweise eine **Sprachnachricht** schicken — also unstrukturiert, wild durcheinander, mit Abschweifungen. Das ist normal und gewollt!
 
 3. **Sage dem User:**
-   > "Erklär mir das Projekt! Am besten einfach drauf los reden — wild durcheinander ist völlig okay. Ich sortiere das dann für dich. Erzähl mir:
+   > „Erklär mir das Projekt! Am besten einfach drauf los reden — wild durcheinander ist völlig okay. Ich sortiere das dann für dich. Erzähl mir:
    > - Was ist das für ein Projekt? (Buch, Kongress, Kurs, Workshop, Marketing-Kampagne, Software, ...)
    > - Für wen ist es? (Zielgruppe)
    > - Was ist das Ziel?
@@ -69,7 +106,7 @@ Das ist der wichtigste Schritt. Der User wird typischerweise eine **Sprachnachri
    **Nicht zu viele Fragen auf einmal!** Maximal 3-5 Fragen, die wirklich nötig sind.
 
 8. **Nach Meilensteinen fragen:**
-   > "Gibt es klare Meilensteine oder Phasen? Ein Meilenstein ist ein messbares Ergebnis, das eine Phase abschließt — z.B. 'Manuskript fertig', 'Seite live', 'Kampagne gestartet'. Wenn du Phasen hast, definieren wir für jede einen Meilenstein."
+   > „Gibt es klare Meilensteine oder Phasen? Ein Meilenstein ist ein messbares Ergebnis, das eine Phase abschließt — z.B. 'Manuskript fertig', 'Seite live', 'Kampagne gestartet'. Wenn du Phasen hast, definieren wir für jede einen Meilenstein."
 
    Meilensteine werden mit ◆ (Raute) dargestellt und in der Protokolldatei visualisiert:
    ```
@@ -82,7 +119,7 @@ Das ist der wichtigste Schritt. Der User wird typischerweise eine **Sprachnachri
 
 9. **Projektgröße bestimmen:**
    Frage den User (oder schätze selbst ein):
-   > "Ist das eher ein kleines oder großes Projekt?"
+   > „Ist das eher ein kleines oder großes Projekt?"
 
    **Klein** = Workshop, einzelne Kampagne, überschaubarer Umfang, wenige Dateien erwartet
    **Groß** = Buch, Kongress, Kurs mit vielen Modulen, Software — viele Dateien aus verschiedenen Bereichen
@@ -170,12 +207,12 @@ Enthält alles: Aufgaben-Tabellen, Meilensteine, Log-Index, Logs.
 
 > Status: 🔄 In Arbeit
 
-| Nr | Aufgabe | Claude | Impact | Braucht | Risiko | Rollback | Status |
-|---|---|---|---|---|---|---|---|
-| [PRE]-01 | 📄 Startseite erstellen | ✅ | 🔴 | — | 🟢 | — | ✅ Erledigt |
-| [PRE]-02 | robots.txt konfigurieren | ✅ | 🟡 | — | 🟢 | Revert | ⬜ Offen |
-| [PRE]-03 | ⚙️ Code-Review Phase 1 | ✅ | 🟡 | Gregor: Abnahme | 🟢 | — | ⬜ Offen |
-| ◆ | **Meilenstein: [MESSBARES ERGEBNIS]** | | | | | | ⬜ Offen |
+| Nr | Aufgabe | Claude | Impact | Aufwand | Braucht | Risiko | Rollback | Status |
+|---|---|---|---|---|---|---|---|---|
+| [PRE]-01 | 📄 Startseite erstellen | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟢 | — | 🟢 | — | ✅ Erledigt |
+| [PRE]-02 | robots.txt konfigurieren | ✅ | 🟡 | 💰🟢 ⏰🟢 💚🟢 | — | 🟢 | Revert | ⬜ Offen |
+| [PRE]-03 | ⚙️ Code-Review Phase 1 | ✅ | 🟡 | 💰🟢 ⏰🟡 💚🟢 | Gregor: Abnahme | 🟢 | — | ⬜ Offen |
+| ◆ | **Meilenstein: [MESSBARES ERGEBNIS]** | | | | | | | ⬜ Offen |
 
 ## Meilensteine (Übersicht)
 
@@ -213,12 +250,12 @@ Bei großen Projekten wachsen Aufgabenbeschreibungen und Logs unabhängig vonein
 
 > Status: 🔄 In Arbeit
 
-| Nr | Aufgabe | Claude | Impact | Braucht | Risiko | Rollback | Status |
-|---|---|---|---|---|---|---|---|
-| [PRE]-01 | 📄 Startseite erstellen | ✅ | 🔴 | — | 🟢 | — | ✅ Erledigt |
-| [PRE]-02 | ⚙️ Komplexe Komponente (→ siehe Aufgabenbeschreibung) | ✅ | 🔴 | — | 🟡 | Revert | ⬜ Offen |
-| [PRE]-03 | ⚙️ Code-Review Phase 1 | ✅ | 🟡 | Gregor: Abnahme | 🟢 | — | ⬜ Offen |
-| ◆ | **Meilenstein: [MESSBARES ERGEBNIS]** | | | | | | ⬜ Offen |
+| Nr | Aufgabe | Claude | Impact | Aufwand | Braucht | Risiko | Rollback | Status |
+|---|---|---|---|---|---|---|---|---|
+| [PRE]-01 | 📄 Startseite erstellen | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟢 | — | 🟢 | — | ✅ Erledigt |
+| [PRE]-02 | ⚙️ Komplexe Komponente (→ siehe Aufgabenbeschreibung) | ✅ | 🔴 | 💰🟢 ⏰🔴 💚🟡 | — | 🟡 | Revert | ⬜ Offen |
+| [PRE]-03 | ⚙️ Code-Review Phase 1 | ✅ | 🟡 | 💰🟢 ⏰🟡 💚🟢 | Gregor: Abnahme | 🟢 | — | ⬜ Offen |
+| ◆ | **Meilenstein: [MESSBARES ERGEBNIS]** | | | | | | | ⬜ Offen |
 
 ## Aufgabenbeschreibungen
 
@@ -277,20 +314,27 @@ Bei großen Projekten wachsen Aufgabenbeschreibungen und Logs unabhängig vonein
    |--------|-----------|-------|
    | Claude | Kann Claude die Aufgabe selbst durchführen? | ✅ = ja, selbständig \| ⚠️ = teilweise (braucht Zuarbeit) \| ❌ = nein (Mensch muss) \| — = nicht zutreffend |
    | Impact | Wie viel trägt die Aufgabe zur Zielerreichung bei? | 🔴 hoch \| 🟡 mittel \| 🟢 niedrig |
-   | Braucht | Wer muss was zuliefern / reviewen / freigeben? | Text (z.B. "Gregor: Review") oder "—" wenn selbständig |
+   | Aufwand | 3-dimensionale Ressourcen-Schätzung | 💰[Stufe] Geld / ⏰[Stufe] Zeit / 💚[Stufe] Emotion (jeweils 🟢 niedrig / 🟡 mittel / 🔴 hoch) |
+   | Braucht | Wer muss was zuliefern / reviewen / freigeben? | Text (z.B. „Gregor: Review") oder „—" wenn selbständig |
    | Risiko | Wie hoch ist das Risiko, dass etwas kaputt geht? | 🔴 hoch \| 🟡 mittel \| 🟢 gering |
-   | Rollback | Was tun, wenn etwas schiefgeht? | Kurzer Text oder "—" wenn risikolos |
+   | Rollback | Was tun, wenn etwas schiefgeht? | Kurzer Text oder „—" wenn risikolos |
 
    Diese Spalten helfen dem User zu entscheiden: Was kann Claude allein machen? Was braucht Aufmerksamkeit? Wo muss jemand handeln?
    Bei Meilenstein-Zeilen (◆) bleiben die Bewertungsspalten leer.
 
-   **Aufgaben-Nummern:** Jede Phase hat ein 3–4-Buchstaben-Prefix (z.B. LIVE, STOLZ, GROW).
+   **Aufgaben-Nummern:** Jede Phase hat ein 3–5-Buchstaben-Prefix (z.B. LIVE, STOLZ, GROW, INFRA, SCAN, DRILL, REACH).
 
-   **Phasen-Prefixe:** Positiv und motivierend wählen! Der Prefix begleitet jede Aufgabe — er sollte sich gut anfühlen. Beispiele: LIVE, STOLZ, GROW, START, GLOW. Vermeiden: technisch-trockene Prefixe wie ORDN, IMPL, PREP.
+   **Phasen-Benennung — WICHTIG:**
+   - **Phasen-Überschriften** tragen den **vollen deutschen/englischen Namen zuerst**, dann den Prefix in Klammern.
+     ✅ `### Phase 1 — Infrastruktur (INFRA)`
+     ❌ `### Phase 1 — INFRA (Infrastruktur)`
+   - **Aufgaben** tragen nur den Prefix als Nummer-Prefix: `INFRA-01`, `INFRA-02`, `SCAN-01`, `DRILL-01`, `REACH-01`
+   - Der Prefix kann **technisch-beschreibend** (INFRA, SCAN, DRILL, REACH) ODER **positiv-motivierend** (LIVE, STOLZ, GROW, START, GLOW) sein — was auch immer zum Projekt passt.
+   - Vermeide Prefixe wie ORDN, IMPL, PREP, wenn sie sich trocken anfühlen. Strategische/operative Projekte funktionieren oft besser mit klaren technischen Prefixen als mit erzwungen-motivierenden.
 
    **Seiten-Aufgaben** (📄): Wenn eine Aufgabe die Erstellung oder Überarbeitung einer Seite/eines Dokuments betrifft.
    **Code-Review** (⚙️): Nach JEDER Phase ein komplettes Review als Aufgabe einplanen.
-   **Perspektivwechsel** (👁️): Am Ende des Projekts IMMER und bei größeren Projekten auch am Ende jeder Phase eine Perspektivwechsel-Aufgabe einplanen (→ siehe "Perspektivwechsel-Check" weiter unten).
+   **Perspektivwechsel** (👁️): Am Ende des Projekts IMMER und bei größeren Projekten auch am Ende jeder Phase eine Perspektivwechsel-Aufgabe einplanen (→ siehe „Perspektivwechsel-Check" weiter unten).
 
    **Sortierung innerhalb einer Phase:** Aufgaben werden nach Status sortiert:
    1. ✅ Erledigt (oben)
@@ -301,7 +345,7 @@ Bei großen Projekten wachsen Aufgabenbeschreibungen und Logs unabhängig vonein
 
    **REGELN für den Protokoll-Verlauf:**
    - **UMGEKEHRT CHRONOLOGISCH:** Neueste Log-Einträge stehen OBEN, älteste UNTEN
-   - **Log-Nummern:** Format `LOG-XXX` (z.B. LOG-001, LOG-002). Erleichtert Suchen und Referenzieren ("siehe LOG-005").
+   - **Log-Nummern:** Format `LOG-XXX` (z.B. LOG-001, LOG-002). Erleichtert Suchen und Referenzieren („siehe LOG-005").
    - **Log-Index pflegen:** Nach JEDEM neuen Log-Eintrag auch den Log-Index oben aktualisieren
    - **Zweck des Index:** Claude kann schnell im Index nachschauen, welcher Log relevant ist, ohne alle Detail-Einträge lesen zu müssen
 
@@ -334,7 +378,7 @@ Bei größeren Projekten ein Entscheidungslog anlegen. Dokumentiert das **Warum*
 **Auswirkung:** [Was ändert sich dadurch?]
 ```
 
-**Wann anlegen?** Wenn beim Setup bereits Entscheidungen getroffen werden (Tech-Stack, Struktur, Plattform). Dem User vorschlagen: "Soll ich ein Entscheidungslog anlegen? Das hilft, wenn wir später nachschauen wollen, warum wir uns für X statt Y entschieden haben."
+**Wann anlegen?** Wenn beim Setup bereits Entscheidungen getroffen werden (Tech-Stack, Struktur, Plattform). Dem User vorschlagen: „Soll ich ein Entscheidungslog anlegen? Das hilft, wenn wir später nachschauen wollen, warum wir uns für X statt Y entschieden haben."
 
 #### d) CLAUDE.md (im Projektordner)
 
@@ -349,7 +393,7 @@ Bei größeren Projekten ein Entscheidungslog anlegen. Dokumentiert das **Warum*
    - **Dateien NIEMALS löschen**, sondern in `xold/` verschieben
    - **Dateireferenzen immer aktuell halten:** Wenn eine Datei eine neue Version bekommt (z.B. V01 → V02), wird die CLAUDE.md sofort aktualisiert, damit alle Pfade/Referenzen auf die aktuelle Version zeigen. Alte Version → `xold/`.
    - Relevante Zugangsdaten (falls vorhanden)
-   - **Projektreview-Regel:** Nach jeweils 10 abgeschlossenen Aufgaben ein Projektreview durchführen (siehe "Projektreview" unten)
+   - **Projektreview-Regel:** Nach jeweils 10 abgeschlossenen Aufgaben ein Projektreview durchführen (siehe „Projektreview" unten)
 
 #### e) `xold/` — Mülleimer-Ordner (immer anlegen)
 
@@ -389,8 +433,8 @@ Root-Dokumente mit **Buchstaben-Prefix** (A, B, C...), Unterordner mit **Nummern
 [Projektordner]/
 ├── CLAUDE.md
 ├── A - Projektbeschreibung-[NAME]-V01.md
-├── B - Aufgaben-[NAME].md                   ← Phasen, Aufgaben, Meilensteine, Specs
-├── C - Protokoll-[NAME].md                  ← Log-Index + Logs
+├── B - Aufgaben-[NAME].md                  ← Phasen, Aufgaben, Meilensteine, Specs
+├── C - Protokoll-[NAME].md                 ← Log-Index + Logs
 ├── D - [z.B. Sitemap / Konzept].md
 ├── E - [z.B. Style-Guide].md
 ├── F - Entscheidungen-[NAME].md
@@ -402,7 +446,7 @@ Root-Dokumente mit **Buchstaben-Prefix** (A, B, C...), Unterordner mit **Nummern
 
 **Wann groß?** Buch (Manuskript, Freigaben, Cover, Marketing), Kongress (Positionierung, Experten, Bilder, Technik), Software (Anforderungen, Design, Docs).
 
-**Warum Buchstaben?** Nummerierte Root-Dateien (01-, 02-) kollidieren visuell mit nummerierten Unterordnern (01-positionierung/, 02-wettbewerb/). Buchstaben machen sofort klar: "Das sind die Hauptdokumente, die ich immer lese."
+**Warum Buchstaben?** Nummerierte Root-Dateien (01-, 02-) kollidieren visuell mit nummerierten Unterordnern (01-positionierung/, 02-wettbewerb/). Buchstaben machen sofort klar: „Das sind die Hauptdokumente, die ich immer lese."
 
 **Typische Unterordner nach Projekttyp:**
 
@@ -418,56 +462,126 @@ Unterordner dem User vorschlagen und bestätigen lassen. Nicht overengineeren!
 
 ---
 
+### Optionale Patterns (wenn anwendbar)
+
+Zwei wiederkehrende Patterns, die nicht jedes Projekt braucht — aber oft genug auftauchen, um sie hier zu dokumentieren. Wenn eines passt: einbauen. Wenn nicht: weglassen.
+
+#### Pattern A: Referenz-Projekt (wenn Projekt auf einem bestehenden aufbaut)
+
+Häufig baut ein neues Projekt auf einem bereits laufenden auf — z.B. ein operatives Migrationsprojekt, das aus einem technischen Engineering-Projekt abgeleitet wird. Oder ein Marketing-Projekt, das auf einen Vorgänger-Kongress verweist.
+
+**Wie integrieren:**
+
+1. **In CLAUDE.md** einen Abschnitt „Referenz-Daten" oder „Referenz-Projekt" einfügen:
+   ```
+   ## Referenz-Daten
+   - **[Name des Referenz-Projekts]:** `/pfad/zum/referenz-projekt/` — enthält [was] und [was].
+   - **Relevante Dateien:** `[unterpfad]/xyz.md`
+   ```
+
+2. **In A - Projektbeschreibung** einen Abschnitt „Quellen / Zugangsdaten" hinzufügen, der die Referenzdateien aus dem anderen Projekt auflistet.
+
+3. **Frage an den User:** „Dieses Projekt baut auf `[anderes Projekt]` auf. Soll ich wichtige Dateien direkt in dein neues Projekt kopieren (damit sie stabil bleiben, wenn das Quell-Projekt sich ändert), oder nur referenzieren?"
+
+4. **Kopierte Dateien mit Datum im Namen markieren** (`2026-02-20-Domains-PHP7-Liste.txt`), damit später klar ist, von welchem Snapshot sie stammen.
+
+**Wann nicht nötig:** Wenn das Projekt komplett eigenständig ist oder der User explizit sagt „frischer Start".
+
+#### Pattern B: Session-Template (für wiederkehrende Arbeitssessions)
+
+Manche Projekte bestehen aus vielen ähnlich strukturierten Arbeitssessions: Migrationstage, Aufnahmetage, Interview-Sessions, Produktionstermine, Kampagnenwellen. Statt jedes Mal bei Null anzufangen, ein **Session-Template** anlegen.
+
+**Wie integrieren:**
+
+1. Im thematisch passenden Unterordner (z.B. `04-Migrations-Logs/`, `03-Aufnahmen/`, `02-Produktionstage/`) eine Datei `Template-[Session-Typ].md` anlegen.
+
+2. **Inhalt des Templates** (typischer Aufbau):
+   ```
+   # [Session-Typ] — [DATUM]
+
+   **Erstellt:** [DATUM]
+   **Owner:** [Person(en)]
+   **Max-Kapazität:** [Anzahl] (falls relevant)
+
+   ## Vorbereitung (Tag davor)
+   - [ ] Checkpunkt 1
+   - [ ] Checkpunkt 2
+
+   ## Durchführung
+   | Nr | Kunde/Item | ... | Status |
+   |---|---|---|---|
+
+   ## [Check]-Checkliste (pro Item)
+   - [ ] Punkt 1
+   - [ ] Punkt 2
+
+   ## Nach der Session
+   - [ ] Migrationsliste aktualisiert
+   - [ ] Log-Eintrag in C geschrieben
+
+   ## Learnings / Vorfälle
+   [Leer lassen, während Session ausfüllen]
+   ```
+
+3. **In B - Aufgaben** eine Aufgabe einfügen, die auf das Template verweist: „Pro Session: Template kopieren und durchgehen."
+
+4. **In CLAUDE.md** kurz erwähnen, dass dieses Template für wiederkehrende Sessions verwendet wird.
+
+**Wann einbauen:** Wenn 3+ ähnlich strukturierte Sessions erwartet werden.
+**Wann weglassen:** Einmalige Aktionen oder Sessions, die zu unterschiedlich sind, um ein Template zu rechtfertigen.
+
+---
+
 ### Phase 5: Verifikation (Drei-Fragen-Technik)
 
 10. **Dem User das Ergebnis zeigen:**
-   - Kurz zusammenfassen, was angelegt wurde
-   - Dateistruktur auflisten
+    - Kurz zusammenfassen, was angelegt wurde
+    - Dateistruktur auflisten
 
 11. **Drei Fragen stellen:**
-   > "Damit ich sicher bin, dass ich alles richtig verstanden habe, hier drei Fragen:"
-   >
-   > [Drei projektspezifische Fragen stellen, die zeigen, ob das Projekt korrekt verstanden wurde]
+    > „Damit ich sicher bin, dass ich alles richtig verstanden habe, hier drei Fragen:"
+    >
+    > [Drei projektspezifische Fragen stellen, die zeigen, ob das Projekt korrekt verstanden wurde]
 
 12. **Verbesserungsvorschläge machen:**
-    > "Gibt es noch etwas, an das du denken solltest? Hier sind meine Vorschläge: [...]"
+    > „Gibt es noch etwas, an das du denken solltest? Hier sind meine Vorschläge: [...]"
 
 13. **Abschluss:**
-    > "Das Projekt ist eingerichtet! Du kannst jetzt jederzeit in diesen Ordner kommen und weiterarbeiten. Ich lese dann automatisch die CLAUDE.md und weiß sofort, wo wir stehen."
+    > „Das Projekt ist eingerichtet! Du kannst jetzt jederzeit in diesen Ordner kommen und weiterarbeiten. Ich lese dann automatisch die CLAUDE.md und weiß sofort, wo wir stehen."
 
 ---
 
 ## Perspektivwechsel-Check (Post-Publishing / Zielüberprüfung)
 
-**Kernidee:** Raus aus der Ersteller-Rolle. Komplett andere Sicht einnehmen. Nicht mehr "toll was wir gemacht haben", sondern: **Würde die Zielgruppe das sofort haben wollen?**
+**Kernidee:** Raus aus der Ersteller-Rolle. Komplett andere Sicht einnehmen. Nicht mehr „toll was wir gemacht haben", sondern: **Würde die Zielgruppe das sofort haben wollen?**
 
 **Wann einplanen?**
 - **Am Ende des Projekts:** IMMER. Ist eine Pflicht-Aufgabe, nicht optional.
 - **Am Ende jeder Phase** (bei größeren Projekten): Empfohlen, besonders wenn die Phase ein nach außen sichtbares Ergebnis hat (z.B. Seite live, Produkt veröffentlicht, Kampagne gestartet).
 
 **Wie benennen?** Der Name passt sich dem Projekt an:
-- Buch → "Post-Publishing"
-- Website → "Post-Launch"
-- Kurs → "Post-Release"
-- Kampagne → "Post-Campaign"
-- Allgemein → "Zielüberprüfung" oder "Qualitäts-Check"
+- Buch → „Post-Publishing"
+- Website → „Post-Launch"
+- Kurs → „Post-Release"
+- Kampagne → „Post-Campaign"
+- Allgemein → „Zielüberprüfung" oder „Qualitäts-Check"
 
 **Was wird geprüft — die 5 Perspektivwechsel-Fragen:**
 
-1. **Wow-Effekt:** Gibt es einen Moment, in dem die Zielgruppe denkt: "Das ist ja genial! Wer steckt dahinter?" — Wenn nicht, fehlt das Besondere. Gut genug ist nicht gut genug.
+1. **Wow-Effekt:** Gibt es einen Moment, in dem die Zielgruppe denkt: „Das ist ja genial! Wer steckt dahinter?" — Wenn nicht, fehlt das Besondere. Gut genug ist nicht gut genug.
 
-2. **Haben-Wollen:** Entsteht beim Anschauen ein sofortiges "Das will ich! Das muss ich haben!"? Oder eher ein "Interessant, mach ich irgendwann"? Der Unterschied ist alles.
+2. **Haben-Wollen:** Entsteht beim Anschauen ein sofortiges „Das will ich! Das muss ich haben!"? Oder eher ein „Interessant, mach ich irgendwann"? Der Unterschied ist alles.
 
 3. **Emotionen:** Berührt es? Begeistert es? Macht es neugierig? Oder ist es nur korrekt und vollständig? Korrekt und vollständig bekommt jeder hin — emotionale Resonanz nicht.
 
-4. **Zielerreichung:** Ist das Ziel dieser Phase / dieses Projekts (wie in der Projektbeschreibung definiert) tatsächlich erfüllt? Nicht "fast", nicht "im Prinzip" — wirklich erfüllt?
+4. **Zielerreichung:** Ist das Ziel dieser Phase / dieses Projekts (wie in der Projektbeschreibung definiert) tatsächlich erfüllt? Nicht „fast", nicht „im Prinzip" — wirklich erfüllt?
 
 5. **Kundensicht:** Die gesamte Customer Journey aus Sicht der Zielgruppe durchspielen. Vom ersten Kontakt bis zur gewünschten Aktion. Wo stolpert man? Wo verliert man die Lust? Wo fehlt Info?
 
 **Wie in die Aufgabenliste einbauen:**
 
 ```
-| [PRE]-XX | 👁️ Perspektivwechsel: [Projektspezifischer Name] | ✅ | 🔴 | Gregor: Review | 🟢 | — | ⬜ Offen |
+| [PRE]-XX | 👁️ Perspektivwechsel: [Projektspezifischer Name] | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟡 | Gregor: Review | 🟢 | — | ⬜ Offen |
 ```
 
 Bei größeren Projekten als eigene Mini-Phase (Beispiel):
@@ -477,14 +591,14 @@ Bei größeren Projekten als eigene Mini-Phase (Beispiel):
 
 > Methodik: Raus aus der Ersteller-Rolle. Von außen drauf schauen wie ein Kunde.
 
-| Nr | Aufgabe | Claude | Impact | Braucht | Risiko | Rollback | Status |
-|---|---|---|---|---|---|---|---|
-| POST-01 | 👁️ Customer Journey durchspielen (Sicht: [Zielgruppe]) | ✅ | 🔴 | Gregor: Review | 🟢 | — | ⬜ Offen |
-| POST-02 | 👁️ Wow-Effekt-Check: Gibt es ein Element das begeistert? | ✅ | 🔴 | Gregor: Review | 🟢 | — | ⬜ Offen |
-| POST-03 | 👁️ Alle Links/CTAs prüfen | ✅ | 🟡 | — | 🟢 | — | ⬜ Offen |
-| POST-04 | 👁️ "Wer ist das?"-Check: Absender klar? Funnel logisch? | ✅ | 🟡 | Gregor: Review | 🟢 | — | ⬜ Offen |
-| POST-05 | 🔧 Alle Findings fixen | ✅ | 🔴 | — | 🟡 | Revert | ⬜ Offen |
-| ◆ | **Meilenstein: Zielüberprüfung bestanden — kein Kunde stolpert** | | | | | | ⬜ Offen |
+| Nr | Aufgabe | Claude | Impact | Aufwand | Braucht | Risiko | Rollback | Status |
+|---|---|---|---|---|---|---|---|---|
+| POST-01 | 👁️ Customer Journey durchspielen (Sicht: [Zielgruppe]) | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟡 | Gregor: Review | 🟢 | — | ⬜ Offen |
+| POST-02 | 👁️ Wow-Effekt-Check: Gibt es ein Element das begeistert? | ✅ | 🔴 | 💰🟢 ⏰🟢 💚🟢 | Gregor: Review | 🟢 | — | ⬜ Offen |
+| POST-03 | 👁️ Alle Links/CTAs prüfen | ✅ | 🟡 | 💰🟢 ⏰🟢 💚🟢 | — | 🟢 | — | ⬜ Offen |
+| POST-04 | 👁️ „Wer ist das?"-Check: Absender klar? Funnel logisch? | ✅ | 🟡 | 💰🟢 ⏰🟢 💚🟢 | Gregor: Review | 🟢 | — | ⬜ Offen |
+| POST-05 | 🔧 Alle Findings fixen | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟡 | — | 🟡 | Revert | ⬜ Offen |
+| ◆ | **Meilenstein: Zielüberprüfung bestanden — kein Kunde stolpert** | | | | | | | ⬜ Offen |
 ```
 
 **Ergebnis:** Konkrete Findings + Fixes. Kein Bericht um des Berichts willen, sondern: besser machen.
@@ -512,7 +626,7 @@ Bei größeren Projekten als eigene Mini-Phase (Beispiel):
 
 **WICHTIG:** Nachdem der Skill durchgelaufen ist und das Projekt aufgesetzt wurde, aktiv prüfen:
 
-> "Bevor wir loslegen — ich habe beim Einrichten ein paar Dinge bemerkt, die den `/projekt-starten` Skill verbessern könnten:
+> „Bevor wir loslegen — ich habe beim Einrichten ein paar Dinge bemerkt, die den `/projekt-starten` Skill verbessern könnten:
 > - [Konkrete Beobachtungen: Was hat gut funktioniert? Was war umständlich? Was fehlte?]
 > - [Vorschläge für Verbesserungen oder Individualisierungen]
 >
@@ -535,26 +649,7 @@ Bei größeren Projekten als eigene Mini-Phase (Beispiel):
 - **Versionierung:** Neue Version = neue Nummer (V01, V02, ...), nie überschreiben
 - **Versionierte Dateien:** Bei neuer Version (z.B. V02) wird die ältere Version (V01) sofort nach `xold/` verschoben. Im Hauptordner liegt immer nur die aktuelle Version. So bleibt der Ordner übersichtlich.
 - **xold-Ordner:** Altes hierhin verschieben statt löschen
-- **Sprache:** Deutsch (Standard), Englisch nur wenn explizit gewünscht
+- **Sprache:** Deutsch (Standard) oder Englisch (wenn das Projekt es verlangt — z.B. internationales Team oder kundenseitig englischer Content). In der CLAUDE.md pro Projekt festlegen.
 - **Dateien nach außen:** Immer nur PDF, nie DOCX
 - **Diktierfehler:** User nutzt häufig Diktierfunktion — Domains, E-Mail-Adressen, Fachbegriffe immer gegenchecken
 - **Nicht overengineeren:** Nur anlegen was gebraucht wird. Lieber schlank starten und bei Bedarf erweitern.
-
----
-
-## Update-Check
-
-Am Ende von Phase 5 (nach der Verifikation) automatisch auf Updates prüfen:
-
-1. Remote-Version abrufen: `curl -s https://raw.githubusercontent.com/ElevationGroupTECH/gregs-business-skills/main/plugins/projekt-starten/.claude-plugin/plugin.json`
-2. Lokale Version aus eigener `plugin.json` lesen
-3. Vergleichen:
-   - **Remote > Lokal →** Hinweis: "Es gibt ein Update für /projekt-starten! (vX.X.X → vY.Y.Y). Update mit: `/plugin marketplace add ElevationGroupTECH/gregs-business-skills`"
-   - **Gleich →** Nichts anzeigen
-
-**Cross-Promotion:** Falls `/projekt-review` nicht installiert ist, darauf hinweisen:
-> "Tipp: Dieser Skill funktioniert am besten zusammen mit `/projekt-review` — damit dein Projekt auch nach Wochen noch auf Hochglanz bleibt. → [github.com/ElevationGroupTECH/gregs-business-skills](https://github.com/ElevationGroupTECH/gregs-business-skills)"
-
----
-
-> Powered by [Teile Deine Botschaft](https://www.teiledeinebotschaft.de) • Elevation Group G.N.D LTD
