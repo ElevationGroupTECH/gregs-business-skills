@@ -91,6 +91,21 @@ This is the most important step. The user will typically send a **voice message*
    - Identify missing info from the protocol and ask specifically
    - **Don't re-ask** what's already in the handover protocol!
 
+7. **Optional: Pull in a Speak transcript as a source**
+
+   Common case: The project starts from a voice recording in the Speak app ("Check my Speak app", "there's a recording from my run", "transcript from the call with X"). The user expects Claude to grab the transcript and use it as source material.
+
+   When the user references a Speak transcript (or it's contextually obvious):
+   - Use `mcp__speak__speak_list_transcripts` (optionally with `search` filter) to find the recording
+   - Pull the full text via `mcp__speak__speak_get_transcript`
+   - **Don't just reference — actually save it in `04-Sources/` (or appropriate subfolder) as a structured `.md` file:**
+     - Naming: `YYYY-MM-DD-Speak-Transcript-[short-title].md`
+     - Layout: frontmatter (ID, date, speakers), summary of key points, quotes block (for marketing), full-text reference
+   - Identify speakers (Greg is usually Speaker 1) and label them by name in the summary where derivable
+   - Reference as source material in `A - Project Description` and `D - Methodology` (or matching docs)
+
+   **Why save instead of just referencing?** Transcript IDs can change, the Speak app may be offline, and the project should explain itself even without Speak access. Copying once into the project stabilizes the source.
+
 ---
 
 ### Phase 3: Ask follow-up questions
@@ -464,7 +479,7 @@ Suggest subfolders to the user and confirm. Don't over-engineer!
 
 ### Optional patterns (when applicable)
 
-Two recurring patterns that not every project needs — but appear often enough to be documented here. If one fits: include it. If not: skip.
+Four recurring patterns that not every project needs — but appear often enough to be documented here. If one fits: include it. If not: skip.
 
 #### Pattern A: Reference Project (when project builds on existing one)
 
@@ -529,6 +544,77 @@ Some projects consist of many similarly structured work sessions: migration days
 
 **When to include:** When 3+ similarly structured sessions are expected.
 **When to skip:** One-off actions, or sessions too different to justify a template.
+
+#### Pattern C: Meta-Procedure Document (for generalizable projects)
+
+Sometimes a project isn't just a result — it's also a **blueprint for future, similar projects**. Typical cases:
+- A freebie that should later be swapped to other topics (one freebie out of 5, then 10, then 20)
+- A funnel system that can be applied to any topic (→ see Quiz-Funnel Factory)
+- A production workflow the team will run multiple times
+- A positioning procedure used for several products
+
+In these cases, a **Meta-Procedure Document (Letter G)** pays off — it describes the generalizable framework in enough detail that the next project can be set up with a single command.
+
+**How to integrate:**
+
+1. **As an additional letter document after F:** create `G - Meta-Procedure-[NAME]-V01.md`.
+
+2. **Content structure** (initial draft):
+   - Why this document exists (which repetition is being avoided)
+   - The framework at a glance (ASCII diagram or flow)
+   - Per stage: input, steps, output, template (prompt), inspiration sources
+   - "Application Examples" section — every new product following the framework gets added as an example
+
+3. **In B - Tasks** add a dedicated phase **META** that runs in parallel to the other phases:
+   ```
+   ### Phase META — Document the meta procedure (continuous, parallel)
+   | META-01 | Skeleton G - Meta-Procedure-V01 | ... |
+   | META-02 | After Phase 1: generalize the steps | ... |
+   | META-03 | After Phase 2: ... | ... |
+   ◆ Milestone: G document is reusable
+   ```
+
+4. **Retrospective application:** If an existing project turns out to be a usable pattern in hindsight (e.g. Quiz-Funnel Factory), suggest a separate ticket to add a G document there.
+
+**When to include:** When the user uses phrases like "we could do this more often," "it's a blueprint," "would be reusable," "as a template for other products," "generalizable."
+**When to skip:** One-off projects with no replication intent.
+
+#### Pattern D: Multi-Channel Project (4-6 distribution channels)
+
+Many TDB projects are **multi-channel products**: one core asset distributed across 4-6 different channels — e.g. a freebie as PDF, skill, ebook, video, funnel AND website. Typical cases:
+- Freebies with multiple distribution paths
+- Launches (PR, ads, newsletter, affiliate, social, event)
+- Content series (blog, video, podcast, newsletter, social clips)
+- Product releases with multiple sales channels
+
+**How to integrate:**
+
+1. **In the project folder, create a subfolder `03-Channels/`** (or project-fitting `03-Distribution/`).
+
+2. **Per channel, a numbered sub-subfolder** in the user's preferred priority order:
+   ```
+   03-Channels/
+   ├── 01-PDF-Freebie/          ← Priority 1
+   ├── 02-Claude-Skill/          ← Priority 2
+   ├── 03-Ebook-Book/            ← Priority 3
+   ├── 04-Video-Miniseries/      ← Priority 4
+   ├── 05-Funnel-Lead-Gen/       ← Priority 5
+   └── 06-Website/               ← Priority 6
+   ```
+
+3. **In B - Tasks** add one phase per channel (phase shortcuts: PDF, SKILL, BOOK, VID, FUN, WEB, …). Each phase ends with a milestone (M3, M4, M5, …).
+
+4. **In A - Project Description** add a "Format & Scope" section with **one block per channel** (cover, scope, price, distribution).
+
+5. **Ask during setup:**
+   - "Which channels do we want to play out?" (less than 3 usually doesn't justify multi-channel)
+   - "What priority order?" (channel 1 gets produced first)
+   - "Are there channels that can come later?" (don't do all at once)
+
+6. **Terminology:** "Distribution channel" and "channel" are synonyms here. Use whichever word the user prefers internally to the project.
+
+**When to include:** When the user names multiple output formats (e.g. "PDF and as a skill and maybe as a book").
+**When to skip:** Single-channel projects (a book = just the book).
 
 ---
 

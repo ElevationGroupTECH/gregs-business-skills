@@ -91,6 +91,21 @@ Das ist der wichtigste Schritt. Der User wird typischerweise eine **Sprachnachri
    - Fehlende Infos aus dem Protokoll identifizieren und gezielt nachfragen
    - **Nicht nochmal alles abfragen**, was bereits im Übergabeprotokoll steht!
 
+7. **Optional: Speak-Transkript als Quelle einbinden**
+
+   Häufiger Fall: Das Projekt entsteht aus einer Sprach-Aufzeichnung in der Speak-App („Schau mal in meine Speak App", „da ist eine Aufnahme vom Joggen", „Transkript vom Gespräch mit X"). Der User erwartet, dass Claude das Transkript eigenständig holt und als Quellmaterial nutzt.
+
+   Wenn der User auf ein Speak-Transkript verweist (oder es kontextuell klar ist):
+   - Via `mcp__speak__speak_list_transcripts` (optional mit `search`-Filter) die passende Aufzeichnung finden
+   - Mit `mcp__speak__speak_get_transcript` den Volltext ziehen
+   - **Nicht nur referenzieren — tatsächlich in `04-Quellen/` (oder entsprechendem Unterordner) als strukturierte `.md`-Datei sichern:**
+     - Namensschema: `YYYY-MM-DD-Speak-Transkript-[Kurztitel].md`
+     - Aufbau: Frontmatter (ID, Datum, Sprecher), Zusammenfassung der Kernaussagen, Zitate-Block (fürs Marketing), Volltext-Referenz
+   - Sprecher identifizieren (Gregor ist meist Speaker 1) und in der Zusammenfassung mit Namen belegen, soweit ableitbar
+   - Als Quellmaterial in `A - Projektbeschreibung` und `D - Methodik` (oder passende Dokumente) referenzieren
+
+   **Warum sichern statt nur referenzieren?** Transkript-IDs können sich ändern, die Speak-App kann offline sein, und das Projekt soll sich auch ohne Speak-Zugriff selbst erklären. Einmaliges Kopieren ins Projekt stabilisiert die Quelle.
+
 ---
 
 ### Phase 3: Rückfragen stellen
@@ -464,7 +479,7 @@ Unterordner dem User vorschlagen und bestätigen lassen. Nicht overengineeren!
 
 ### Optionale Patterns (wenn anwendbar)
 
-Zwei wiederkehrende Patterns, die nicht jedes Projekt braucht — aber oft genug auftauchen, um sie hier zu dokumentieren. Wenn eines passt: einbauen. Wenn nicht: weglassen.
+Vier wiederkehrende Patterns, die nicht jedes Projekt braucht — aber oft genug auftauchen, um sie hier zu dokumentieren. Wenn eines passt: einbauen. Wenn nicht: weglassen.
 
 #### Pattern A: Referenz-Projekt (wenn Projekt auf einem bestehenden aufbaut)
 
@@ -529,6 +544,77 @@ Manche Projekte bestehen aus vielen ähnlich strukturierten Arbeitssessions: Mig
 
 **Wann einbauen:** Wenn 3+ ähnlich strukturierte Sessions erwartet werden.
 **Wann weglassen:** Einmalige Aktionen oder Sessions, die zu unterschiedlich sind, um ein Template zu rechtfertigen.
+
+#### Pattern C: Meta-Verfahren-Dokument (bei generalisierungsfähigen Projekten)
+
+Manchmal ist ein Projekt nicht nur ein Ergebnis, sondern zugleich ein **Blueprint für zukünftige, ähnliche Projekte**. Typische Fälle:
+- Ein Freebie, das später gegen andere Themen ausgetauscht werden soll (ein Freebie aus 5, danach 10, 20)
+- Ein Funnel-System, das auf beliebige Themen angewendet werden kann (→ siehe Quiz-Funnel-Fabrik)
+- Ein Produktions-Workflow, den das Team mehrfach durchlaufen wird
+- Ein Positionierungs-Verfahren, das für mehrere Produkte genutzt wird
+
+In diesen Fällen lohnt sich ein **Meta-Verfahren-Dokument (Buchstabe G)**, das das generalisierbare Rahmenwerk beschreibt — so detailliert, dass das nächste Projekt mit einem einzigen Befehl aufgesetzt werden kann.
+
+**Wie integrieren:**
+
+1. **Nach F als zusätzliches Buchstaben-Dokument** `G - Meta-Verfahren-[NAME]-V01.md` anlegen.
+
+2. **Inhaltliche Struktur** (Erstentwurf):
+   - Warum dieses Dokument existiert (welche Wiederholung vermieden wird)
+   - Das Rahmenwerk auf einen Blick (ASCII-Diagramm oder Flow)
+   - Pro Stufe: Input, Schritte, Output, Vorlage (Prompt), Inspirationsquellen
+   - Abschnitt „Anwendungs-Beispiele" — jedes neue Produkt, das dem Rahmen folgt, wird als Beispiel ergänzt
+
+3. **In B - Aufgaben** eine eigene Phase **META** einplanen, die parallel zu den anderen Phasen läuft:
+   ```
+   ### Phase META — Meta-Verfahren dokumentieren (parallel durchgängig)
+   | META-01 | Grundgerüst G - Meta-Verfahren-V01 | ... |
+   | META-02 | Nach Phase 1: Schritte generalisieren | ... |
+   | META-03 | Nach Phase 2: ... | ... |
+   ◆ Meilenstein: G-Dokument wiederverwendbar
+   ```
+
+4. **Retrospektive Anwendung:** Wenn ein bestehendes Projekt im Nachhinein als Muster taugt (z.B. Quiz-Funnel-Fabrik), als separates Ticket vorschlagen, dort ein G-Dokument nachzuliefern.
+
+**Wann einbauen:** Wenn der User Formulierungen verwendet wie „das könnte man öfter machen", „ist ein Blueprint", „das wäre wiederverwendbar", „als Vorlage für andere Produkte", „verallgemeinerbar".
+**Wann weglassen:** Einmal-Projekte ohne Replikations-Absicht.
+
+#### Pattern D: Multi-Channel-Projekt (4-6 Ausspielkanäle)
+
+Viele TDB-Projekte sind **Multi-Channel-Produkte**: ein Kerninhalt, der über 4-6 verschiedene Kanäle ausgespielt wird — z.B. ein Freebie als PDF, Skill, E-Book, Video, Funnel UND Website. Typische Fälle:
+- Freebies mit mehreren Ausspielwegen
+- Launches (PR, Ads, Newsletter, Affiliate, Social, Event)
+- Content-Serien (Blog, Video, Podcast, Newsletter, Social-Clips)
+- Produkt-Releases mit mehreren Verkaufskanälen
+
+**Wie integrieren:**
+
+1. **Im Projektordner einen Unterordner `03-Ausspielkanaele/` anlegen** (oder projekt-passend `03-Distribution/`, `03-Kanaele/`).
+
+2. **Pro Kanal einen nummerierten Sub-Unterordner** in der vom User gewünschten Priorisierungs-Reihenfolge:
+   ```
+   03-Ausspielkanaele/
+   ├── 01-PDF-Freebie/          ← Priorität 1
+   ├── 02-Claude-Skill/          ← Priorität 2
+   ├── 03-Ebook-Buch/            ← Priorität 3
+   ├── 04-Video-Miniserie/       ← Priorität 4
+   ├── 05-Funnel-Lead-Gen/       ← Priorität 5
+   └── 06-Website/               ← Priorität 6
+   ```
+
+3. **In B - Aufgaben** pro Kanal eine eigene Phase anlegen (Phasen-Kürzel je Kanal: PDF, SKILL, BOOK, VID, FUN, WEB, …). Jede Phase schließt mit einem Meilenstein ab (M3, M4, M5, …).
+
+4. **In A - Projektbeschreibung** einen Abschnitt „Format & Umfang" mit **einem Block pro Kanal** (Titelseite, Umfang, Preis, Distribution).
+
+5. **Beim Setup abfragen:**
+   - „Welche Kanäle sollen wir bespielen?" (nicht weniger als 3 ist meist Multi-Channel sinnvoll)
+   - „In welcher Priorisierungs-Reihenfolge?" (Kanal 1 wird zuerst produziert)
+   - „Gibt es Kanäle, die später kommen können?" (nicht alle auf einmal)
+
+6. **Begrifflich:** „Ausspielkanal" und „Distributionskanal" sind Synonyme. Projekt-intern das vom User bevorzugte Wort verwenden.
+
+**Wann einbauen:** Wenn der User mehrere Ausspielformate nennt (z.B. „PDF und als Skill und vielleicht als Buch").
+**Wann weglassen:** Bei Single-Channel-Projekten (ein Buch = nur das Buch).
 
 ---
 
