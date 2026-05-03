@@ -1,204 +1,237 @@
-**🇬🇧 English** | [🇩🇪 Deutsch](README.de.md)
+**🇩🇪 Deutsch** | [🇬🇧 English](README.en.md)
 
 <table><tr>
 <td width="160"><img src="assets/gregs-business-skills-hero.png" alt="Greg's Business Skills" width="140"></td>
 <td>
 
-# Greg's Business Skills **v1.2.0**
+# Greg's Business Skills **v1.3.0**
 
-**Like Neo downloading kung fu in The Matrix — except it's business skills. Plug in, download structure, go.**
+**Wie Neo in Matrix die Kampfkunst — nur in Business-Kunst. Skills einklinken, Struktur downloaden, loslegen.**
 
 </td>
 </tr></table>
 
-Ever started a new project and spent 20 minutes explaining context to Claude — only to do it all over again next session? Or opened a project folder after two weeks and had zero clue where you left off?
+Schon mal ein neues Projekt gestartet und 20 Minuten damit verbracht, Claude den Kontext zu erklären — nur um das in der nächsten Session nochmal zu machen? Oder einen Projektordner nach zwei Wochen geöffnet und keine Ahnung gehabt, wo du aufgehört hast?
 
-Whether you know the type or you ARE the type: 147 files on the desktop, including "Final_v3_FINAL_really-final-no-seriously-this-time-superfinal.docx". And then you wonder why Claude starts calling you "Hugo"...
+Ob du den Typ kennst oder selber einer bist: 147 Dateien auf dem Schreibtisch, darunter „Entwurf_v3_FINAL_wirklich-final-jetzt-aber-echt-final-superfinal.docx". Und dann wundert man sich, warum Claude dich irgendwann mit „Hugo" anspricht... Kein Urteil — wir waren alle schon da.
 
-Here's the thing: **Claude is only as good as the context you give it.** That's called context engineering — and it's the difference between an AI that calls you "Hugo" and one that knows your project better than you do.
+Hier ist die Sache: **Claude ist nur so gut wie der Kontext, den du ihm gibst.** Das nennt sich Context Engineering — und es ist der Unterschied zwischen einer KI die dich mit "Hugo" anspricht und einer die dein Projekt besser kennt als du selbst.
 
-These skills are automated context engineering. You just talk — and Claude turns it into a project structure that still works after weeks and months. Claude stays with you through large projects all the way to the finish line — and only calls people "Hugo" who are actually named Hugo.
+Diese Skills sind automatisiertes Context Engineering. Du laberst einfach drauflos — und Claude macht daraus eine Projektstruktur, die auch nach Wochen und Monaten noch funktioniert. Claude geht mit dir auch größere Projekte sauber bis zum Ende — und spricht nur echte Hugos mit Hugo an.
 
 ---
 
 ## Greg's Project Cockpit 🎯
 
-**Start projects right. Keep them right.**
+**Projekte sauber starten. Sauber halten.**
 
-Your first skill bundle. Two skills for structure lovers and excellence seekers:
+Dein erstes Skill-Bundle. Zwei Skills für Strukturbedürftige und Excellence-Lovers:
 
 ```
-  /project-kickoff              /project-review
+  /projekt-starten              /projekt-review
   +----------------+            +----------------+
-  | START RIGHT    |            | STAY RIGHT     |
-  |                |            |                |
-  | Structure      | -------->  | Score          |
-  | Description    |   Work     | Fix            |
-  | Changelog      | <--------  | Polish         |
-  | CLAUDE.md      |            | Celebrate      |
+  | SAUBER         |            | SAUBER         |
+  | STARTEN        |            | HALTEN         |
+  |                | -------->  |                |
+  | Struktur       | Arbeiten   | Score          |
+  | Beschreibung   | <--------  | Fixen          |
+  | Protokoll      |            | Polieren       |
+  | CLAUDE.md      |            | Feiern         |
   +----------------+            +----------------+
 ```
 
-**`/project-kickoff`** sets up a clean foundation. **`/project-review`** keeps it clean as the project grows. Without review, every project turns into a jungle. Without a good kickoff, there's nothing worth reviewing.
+**`/projekt-starten`** legt ein sauberes Fundament. **`/projekt-review`** hält es sauber, während das Projekt wächst. Ohne Review verwildert jedes Projekt zum Dschungel. Ohne guten Start gibt's nichts, was sich zu reviewen lohnt.
 
-Install both. Your future self will thank you.
+Installier beide. Dein zukünftiges Ich wird es dir danken.
+
+---
+
+## Greg's Text-Toolkit ✍️
+
+**Texte, die wirken. Buttons, die scannbar sind.**
+
+Zwei Skills für alle, die Texte schreiben, die nicht nur korrekt sind, sondern auch ankommen:
+
+```
+  /text-wirkungsfilter         /text-subvokalisation
+  +---------------------+      +-----------------------+
+  | TEXTE DIE WIRKEN    |      | UI DIE SCANNT         |
+  |                     |      |                       |
+  | Satz für Satz       |      | Buttons               |
+  | 5-Farben-Skala      |      | Überschriften         |
+  | Filler raus         |      | Listen                |
+  | Polierter Output    |      | Labels & CTAs         |
+  +---------------------+      +-----------------------+
+```
+
+**`/text-wirkungsfilter`** analysiert jeden Satz auf emotionale Wirkung — und liefert direkt einen straffen, polierten Text. **`/text-subvokalisation`** optimiert Buttons, Überschriften, Listen und Labels für schnelle visuelle Erfassung — kein inneres Mitlesen mehr nötig.
+
+Aktuell nur auf Deutsch verfügbar.
 
 ---
 
 ## Installation
 
-### 🟢 The Easy Way (always works)
+### 🟢 Weg 1: Am einfachsten (funktioniert IMMER)
 
-**Step 1:** [📥 Download here](https://github.com/ElevationGroupTECH/gregs-business-skills/archive/refs/heads/main.zip) (one click, download starts immediately)
-- Unzip the file
+**Schritt 1:** [📥 Hier herunterladen](https://github.com/ElevationGroupTECH/gregs-business-skills/archive/refs/heads/main.zip) (ein Klick, Download startet sofort)
+- ZIP-Datei entpacken (liegt dann in deinem Downloads-Ordner)
 
-**Step 2:** Tell Claude:
-> "Install the skills from ~/Downloads/gregs-business-skills-main/plugins/"
+**Schritt 2:** Sage Claude:
+> "Installiere die Skills aus ~/Downloads/gregs-business-skills-main/plugins/"
 
-Done. Claude finds the SKILL.md files and puts them where they belong.
+Fertig. Claude findet die SKILL.md-Dateien und kopiert sie dahin, wo sie hingehören.
 
-**Or copy them manually:**
+**Oder manuell kopieren:**
 ```
-plugins/project-kickoff/skills/project-kickoff/SKILL.md  -->  ~/.claude/commands/project-kickoff.md
-plugins/project-review/skills/project-review/SKILL.md    -->  ~/.claude/commands/project-review.md
+plugins/projekt-starten/skills/projekt-starten/SKILL.md           -->  ~/.claude/commands/projekt-starten.md
+plugins/projekt-review/skills/projekt-review/SKILL.md             -->  ~/.claude/commands/projekt-review.md
+plugins/text-wirkungsfilter/skills/text-wirkungsfilter/SKILL.md   -->  ~/.claude/commands/text-wirkungsfilter.md
+plugins/text-subvokalisation/skills/text-subvokalisation/SKILL.md -->  ~/.claude/commands/text-subvokalisation.md
 ```
 
-Then restart Claude Code or type `/commands` to verify.
+Dann Claude Code neu starten oder `/commands` eingeben zum Prüfen.
 
-### 🔵 The Auto Way (Claude Code 1.0.33+)
+### 🔵 Weg 2: Automatisch (ab Claude Code 1.0.33+)
 
-> ⚠️ Requires Claude Code version 1.0.33 or newer.
-> Check with: `claude --version` | Update with: `claude update`
+> ⚠️ Benötigt Claude Code Version 1.0.33 oder neuer.
+> Prüfen mit: `claude --version` | Aktualisieren mit: `claude update`
 
 ```bash
-# Register marketplace (one time)
+# Marketplace registrieren (einmalig)
 /plugin marketplace add ElevationGroupTECH/gregs-business-skills
 
-# Install
-/plugin install project-kickoff@gregs-business-skills     # English
-/plugin install project-review@gregs-business-skills      # English
-/plugin install projekt-starten@gregs-business-skills     # Deutsch
-/plugin install projekt-review@gregs-business-skills      # Deutsch
+# Installieren
+/plugin install projekt-starten@gregs-business-skills      # Deutsch
+/plugin install projekt-review@gregs-business-skills       # Deutsch
+/plugin install text-wirkungsfilter@gregs-business-skills  # Deutsch
+/plugin install text-subvokalisation@gregs-business-skills # Deutsch
+/plugin install project-kickoff@gregs-business-skills      # English
+/plugin install project-review@gregs-business-skills       # English
 ```
 
-Then just run `/project-kickoff` or `/project-review` in any Claude Code session.
+Falls das nicht funktioniert --> Weg 1 nutzen.
+
+Dann einfach `/projekt-starten`, `/projekt-review`, `/text-wirkungsfilter` oder `/text-subvokalisation` in einer beliebigen Claude-Code-Session starten.
 
 ---
 
-## The Skills
+## Die Skills
 
-### `/project-kickoff` — Start Projects Right
+### `/projekt-starten` — Projekte richtig aufsetzen
 
-Turn a chaotic brain dump into a properly structured project. You talk, Claude organizes:
+Verwandle ein chaotisches Brainstorming in ein sauber strukturiertes Projekt. Du redest, Claude organisiert:
 
-- **Project description** with all the details that matter (goals, people, timeline, tech stack)
-- **Changelog** with phases, milestones, task tracking, and log entries
-- **CLAUDE.md** so Claude knows exactly what to read and how to behave in your project
-- **Smart sizing** — small projects stay flat, large ones get letter-prefixed docs + numbered subfolders
-- **Assessment columns** — Every task gets assessed: Can Claude handle it alone? What's the impact? Who needs to deliver? How risky? What's the rollback?
-- **Verification** — three targeted questions to make sure nothing was lost in translation
-- **Perspective shift check** — step out of creator mode, look at your project through your customer's eyes
-- **Handoff protocol** — Planned the project in one chat and implementing in another? Bring the handoff protocol — Claude skips questions already answered.
+- **Projektbeschreibung** mit allem was zählt (Ziele, Beteiligte, Zeitrahmen, Technik)
+- **Protokoll** mit Phasen, Meilensteinen, Aufgaben-Tracking und Log-Einträgen
+- **CLAUDE.md** damit Claude genau weiß, was es lesen soll und wie es sich im Projekt verhalten soll
+- **Smarte Größenanpassung** — kleine Projekte bleiben flach, große bekommen Buchstaben-Prefix + nummerierte Unterordner
+- **Bewertungsspalten** — Jede Aufgabe wird bewertet: Kann Claude das allein? Wie hoch ist der Impact? Wer muss zuliefern? Wie riskant? Was ist der Rollback?
+- **Verifikation** — drei gezielte Fragen, damit nichts verloren geht
+- **Perspektivwechsel-Check** — raus aus der Macher-Rolle, dein Projekt mit den Augen deiner Zielgruppe sehen
+- **Übergabeprotokoll** — Projekt in einem Chat geplant und jetzt in einem neuen Chat umsetzen? Einfach das Übergabeprotokoll mitbringen — Claude überspringt die Fragen die schon beantwortet sind.
 
-**How it works:** Run `/project-kickoff`, dump everything you know about your project (voice message style is fine — messy, unstructured, all over the place), and watch Claude turn it into a pristine project structure.
+**So funktioniert's:** Starte `/projekt-starten`, erzähl einfach drauflos (Sprachnachricht-Style — chaotisch, unstrukturiert, wild durcheinander), und schau zu wie Claude daraus eine saubere Projektstruktur macht.
 
-### `/project-review` — Polish Check (Score Your Project)
+### `/projekt-review` — Hochglanz-Check (Dein Projekt-Score)
 
-Your project has been growing for weeks. Files everywhere. The changelog is three updates behind. The CLAUDE.md still mentions Phase 1 when you're deep in Phase 3.
+Dein Projekt wächst seit Wochen. Dateien überall. Das Protokoll ist drei Updates hinterher. Die CLAUDE.md erwähnt noch Phase 1, obwohl du längst in Phase 3 steckst.
 
-This skill runs a comprehensive review and gives you a **Polish Score out of 10**:
+Dieser Skill macht ein umfassendes Review und gibt dir einen **Hochglanz-Score von 10**:
 
-| Category | What It Checks |
+| Kategorie | Was geprüft wird |
 |---|---|
-| 🏗️ **Structure** | CLAUDE.md, file naming, folder hierarchy |
-| 📋 **Completeness** | Project description, tasks, milestones, changelog |
-| 🔗 **Consistency** | Cross-references, URLs, phase names, status indicators |
-| 🕐 **Currency** | Are statuses up to date? Is the changelog current? |
-| 🧹 **Cleanliness** | Temp files, orphaned docs, overgrown files |
+| 🏗️ **Struktur** | CLAUDE.md, Dateibenennung, Ordner-Hierarchie |
+| 📋 **Vollständigkeit** | Projektbeschreibung, Aufgaben, Meilensteine, Protokoll |
+| 🔗 **Konsistenz** | Querverweise, URLs, Phasennamen, Status-Angaben |
+| 🕐 **Aktualität** | Stimmen die Status? Ist das Protokoll aktuell? |
+| 🧹 **Sauberkeit** | Temp-Dateien, verwaiste Dokumente, aufgeblähte Dateien |
 
-**What happens:**
-1. Full assessment (reads everything, checks everything)
-2. Automatic fixes (sort order, log index, file overview — the obvious stuff)
-3. Decision table (things that need your input)
-4. Recommended tasks with priority and score impact
-5. Score forecast: "If you do all of this --> 9.2 / 10"
+**Was passiert:**
+1. Komplette Bestandsaufnahme (liest alles, prüft alles)
+2. Automatische Fixes (Sortierung, Log-Index, Dateiübersicht — das Offensichtliche)
+3. Entscheidungstabelle (Dinge, die deinen Input brauchen)
+4. Empfohlene Aufgaben mit Priorität und Score-Impact
+5. Score-Prognose: "Wenn du das alles machst --> 9.2 / 10"
 
-**The score scale:**
+**Die Score-Skala:**
 ```
 0-1: 🤯  |  1-2: 🤬  |  2-3: 😱  |  3-4: 😫  |  4-5: 🥵
 5-6: 🧐  |  6-7: 🤔  |  7-8: 😀  |  8-9: 🤩💪  |  9-10: 🏆🏆🏆
 ```
 
-Hit 9+? You get a celebration. You've earned it.
+Score 9+ erreicht? Du bekommst eine Celebration. Hast du dir verdient.
 
 ---
 
-## Examples
+## Beispiele
 
 <p align="center">
-  <img src="assets/before-after-project-structure.png" alt="Before and After Project Kickoff" width="600">
+  <img src="assets/before-after-project-structure.png" alt="Vorher und Nachher — Projektstruktur" width="600">
 </p>
 
 <p align="center">
-  <img src="assets/review-score-example.png" alt="Project Review Score Example" width="400">
+  <img src="assets/review-score-example.png" alt="Projekt-Review Score Beispiel" width="400">
 </p>
 
 ---
 
-## Who Is This For?
+## Für wen ist das?
 
-- **Coaches & consultants** managing client projects, course launches, or event planning
-- **Marketers** juggling campaigns, content calendars, and website projects
-- **Solo entrepreneurs** who need structure but don't have a project manager
-- **Anyone using Claude Code** who wants their AI to actually remember what's going on
+- **Coaches & Berater** die Kundenprojekte, Kurs-Launches oder Events managen
+- **Marketer** die Kampagnen, Content-Kalender und Website-Projekte jonglieren
+- **Solo-Unternehmer** die Struktur brauchen, aber keinen Projektmanager haben
+- **Alle Claude-Code-Nutzer** die wollen, dass ihre KI sich tatsächlich erinnert, worum es geht
 
-If you've ever reopened a Claude conversation and spent 10 minutes re-explaining your project — these skills fix that. Permanently.
-
----
-
-## A Word of Honesty
-
-These skills aren't magic. They won't fix a project that has no clear goal, and they won't replace thinking about what you're actually building. What they will do is remove the friction of setting up and maintaining the boring-but-essential project scaffolding — so you can focus on the work that matters.
-
-They're the skills we use daily. Battle-tested, not perfect. And completely free.
+Wenn du jemals eine Claude-Konversation neu geöffnet und 10 Minuten damit verbracht hast, dein Projekt nochmal zu erklären — diese Skills lösen das. Dauerhaft.
 
 ---
 
-## Languages
+## Ein ehrliches Wort
 
-Every skill is available in **English** and **German**:
+Diese Skills sind keine Magie. Sie retten kein Projekt ohne klares Ziel, und sie ersetzen nicht das Nachdenken darüber, was du eigentlich baust. Was sie tun: Sie nehmen dir die Reibung beim Aufsetzen und Pflegen des langweiligen-aber-wichtigen Projekt-Gerüsts ab — damit du dich auf die Arbeit konzentrieren kannst, die wirklich zählt.
 
-| English | Deutsch | Description |
+Das sind die Skills, die wir täglich nutzen. Praxiserprobt, nicht perfekt. Und komplett kostenlos.
+
+---
+
+## Sprachen
+
+Die Projekt-Skills gibt es auf **Deutsch** und **Englisch**, die Text-Skills aktuell nur auf Deutsch:
+
+| Deutsch | English | Beschreibung |
 |---|---|---|
-| `/project-kickoff` | `/projekt-starten` | Set up a new project with proper structure |
-| `/project-review` | `/projekt-review` | Score and polish an existing project |
+| `/projekt-starten` | `/project-kickoff` | Neues Projekt mit sauberer Struktur aufsetzen |
+| `/projekt-review` | `/project-review` | Bestehendes Projekt bewerten und auf Hochglanz bringen |
+| `/text-wirkungsfilter` | — | Texte Satz für Satz auf Wirkung analysieren und polieren |
+| `/text-subvokalisation` | — | Buttons, Überschriften, Listen für schnelle Erfassung optimieren |
 
 ---
 
-## Contributing
+## Mitmachen
 
-Found a bug? Have an idea for a new skill? PRs and issues are welcome.
-
----
-
-## License
-
-Apache 2.0 — use it, modify it, share it.
+Bug gefunden? Idee für einen neuen Skill? PRs und Issues sind willkommen.
 
 ---
 
-## About
+## Lizenz
 
-Built by **[Teile Deine Botschaft](https://www.teiledeinebotschaft.de)** (TDB). These skills come from Gregor Dorsch — structure nerd, context engineering obsessive, and the kind of person who'd rather spend 2 hours perfecting a CLAUDE.md than 20 minutes working in a messy project.
+Apache 2.0 — nutzen, anpassen, teilen.
 
-Structure is king for context engineering. And these skills are Greg's way of automating that for everyone.
+---
 
-> *Built from hundreds of hours of real project work with Claude. Not theory — this is how we actually work every day.*
+## Über uns
 
-**Want to go deeper?**
-- [Visit our website](https://www.teiledeinebotschaft.de) — Online business without tech headaches
-- [Meet the team](https://www.teiledeinebotschaft.de/termin) — Book a free intro call
-- [Read what our clients say](https://www.teiledeinebotschaft.de/kundenstimmen) — Real voices, real results
+Gebaut von **[Teile Deine Botschaft](https://www.teiledeinebotschaft.de)** (TDB). Diese Skills stammen von Gregor Dorsch — Strukturnerd, Context-Engineering-Fetischist und der Typ, der lieber 2 Stunden an einer CLAUDE.md feilt als 20 Minuten in einem chaotischen Projekt zu arbeiten.
+
+Struktur ist King für Context Engineering. Und diese Skills sind Gregors Art, das automatisiert an jeden weiterzugeben.
+
+> *Entstanden aus hunderten Stunden echtem Projektarbeiten mit Claude. Keine Theorie — so arbeiten wir wirklich jeden Tag.*
+
+**Willst du tiefer einsteigen?**
+- [Unsere Website](https://www.teiledeinebotschaft.de) — Online-Business ohne Technik-Kopfschmerzen
+- [Termin buchen](https://www.teiledeinebotschaft.de/termin) — Kostenloses Erstgespräch
+- [Kundenstimmen](https://www.teiledeinebotschaft.de/kundenstimmen) — Echte Stimmen, echte Ergebnisse
 
 ---
 
