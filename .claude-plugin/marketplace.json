@@ -11,6 +11,8 @@
     "plugins/projekt-starten",
     "plugins/project-kickoff",
     "plugins/projekt-review",
-    "plugins/project-review"
+    "plugins/project-review",
+    "plugins/text-wirkungsfilter",
+    "plugins/text-subvokalisation"
   ]
 }

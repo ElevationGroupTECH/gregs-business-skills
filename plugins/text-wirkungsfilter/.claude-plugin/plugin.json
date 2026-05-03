@@ -1,0 +1,8 @@
+{
+  "name": "text-wirkungsfilter",
+  "displayName": "Text-Wirkungsfilter",
+  "description": "Analysiert jeden Text Satz für Satz auf emotionale Wirkung — mit 5-stufiger Farbskala. Findet Filler-Sätze, schwache Stellen und liefert einen polierten Text, der wirkt. Deutsche Version.",
+  "language": "de",
+  "version": "1.0.0",
+  "skills": ["skills/text-wirkungsfilter"]
+}

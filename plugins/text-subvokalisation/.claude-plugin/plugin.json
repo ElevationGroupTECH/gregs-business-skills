@@ -1,0 +1,8 @@
+{
+  "name": "text-subvokalisation",
+  "displayName": "Text-Subvokalisation",
+  "description": "Optimiert alle Nicht-Fließtext-Elemente — Buttons, Überschriften, Listen, Labels, CTAs, Betreffzeilen — für schnelle visuelle Erfassung ohne inneres Mitlesen. Deutsche Version.",
+  "language": "de",
+  "version": "1.0.0",
+  "skills": ["skills/text-subvokalisation"]
+}
