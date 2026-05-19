@@ -132,14 +132,15 @@ Das ist der wichtigste Schritt. Der User wird typischerweise eine **Sprachnachri
    ◆ M3: Buch veröffentlicht            ⬜ offen
    ```
 
-9. **Projektgröße bestimmen:**
+9. **Projektgröße / -ebene bestimmen:**
    Frage den User (oder schätze selbst ein):
-   > „Ist das eher ein kleines oder großes Projekt?"
+   > „Ist das ein kleines Projekt, ein großes Projekt — oder ein **Programm** (eine übergeordnete Klammer über mehrere zusammenhängende Teilprojekte)?"
 
    **Klein** = Workshop, einzelne Kampagne, überschaubarer Umfang, wenige Dateien erwartet
    **Groß** = Buch, Kongress, Kurs mit vielen Modulen, Software — viele Dateien aus verschiedenen Bereichen
+   **Programm** = mehrere zusammenhängende Projekte, die einem gemeinsamen Nutzenziel dienen und koordiniert gesteuert werden. Standard-Projektmanagement-Hierarchie: **Portfolio › Programm › Projekt** (PMI/GPM). Beispiele: eine Reihe von Case Studies, eine Buchreihe, mehrere parallele Kundenprojekte unter einem Dach, ein Produktbereich mit mehreren Teilprodukten.
 
-   Im Zweifel: **Klein starten.** Man kann später immer Unterordner ergänzen.
+   Im Zweifel: **Klein starten.** Man kann später immer Unterordner ergänzen — und ein großes Projekt kann später zum **Programm „hochgezogen"** werden, indem nur eine Programm-Ebene darübergelegt wird (bestehende Projekte werden zu Teilprojekten — **nicht** umstrukturieren/umbenennen, nur die Klammer ergänzen).
 
 ---
 
@@ -181,6 +182,32 @@ Bei großen Projekten mit thematischen Unterordnern kollidieren nummerierte Root
 ```
 
 **Regel:** Die Buchstaben-Dateien (A, B, C...) sind die Dokumente, die Claude bei jedem Gesprächsstart liest. Nummern (01-, 02-...) sind für die Unterordner.
+
+##### Programm: Übergeordnete Ebene + vollständige Teilprojekte
+
+Ein **Programm** ist die Klammer über mehrere zusammenhängende Projekte (PM-Hierarchie **Portfolio › Programm › Projekt**). Man kann **im Teilprojekt** arbeiten (ein konkretes Projekt weiterführen) **oder im Programm** (übergreifendes Konzept, Nomenklatur, Auswertung, Anlegen neuer Teilprojekte).
+
+```
+[Programm-Ordner]/
+├── CLAUDE.md                                   ← Programm-Einstieg (listet Teilprojekte, verweist runter)
+├── A - Programmbeschreibung-[NAME]-V01.md      ← übergreifendes Konzept (immer lesen)
+├── B - Aufgaben-[NAME].md                      ← programmweite Aufgaben/Meilensteine
+├── C - Protokoll-[NAME].md                     ← Log-Index + Logs
+├── F - Entscheidungen-[NAME].md                ← Entscheidungslog (empfohlen)
+├── G - [übergreifende Konvention].md           ← optional, z.B. Nomenklatur/Standards
+├── [NN-Teilprojekt-1]/                         ← je ein vollständiges „großes Projekt"
+│   ├── CLAUDE.md  +  A/B/C/F  +  thematische Unterordner
+├── [NN-Teilprojekt-2]/
+├── ...
+└── xold/
+```
+
+**Regeln Programm:**
+- Die Programm-Ebene hat **eigene** CLAUDE.md + A/B/C/F (gleiche Buchstaben-Logik wie großes Projekt). Fokus: das Übergreifende — Konzept, Nomenklatur, Output-Strategie, Anlegen/Verwalten von Teilprojekten. `A` heißt hier **Programmbeschreibung** (nicht Projektbeschreibung).
+- Jedes **Teilprojekt** ist intern ein vollständiges großes Projekt mit **eigener** CLAUDE.md + A/B/C/F + Unterordnern. Die Teilprojekt-CLAUDE.md verweist nach oben („Programm-A zuerst lesen"); die Programm-CLAUDE.md listet die Teilprojekte.
+- **Bei Arbeit im Teilprojekt:** zuerst Programm-`A` (Konzept) lesen, dann Teilprojekt-CLAUDE.md/A/B.
+- **Bestehendes großes Projekt hochziehen:** NICHT umstrukturieren/umbenennen (Churn-Risiko). Nur die Programm-Klammer darüberlegen; das bestehende Projekt wird zu einem Teilprojekt.
+- **Nicht overengineeren:** Programm nur wählen, wenn wirklich mehrere zusammenhängende Projekte existieren oder klar absehbar sind. Ein einzelnes Projekt bleibt klein/groß.
 
 ---
 
@@ -419,7 +446,7 @@ Z.B. Sitemap, Style-Guide, Methodik-Leitfaden, Teilnehmerliste, Marketing-Text, 
 
 ---
 
-### Strukturierung: Klein vs. Groß
+### Strukturierung: Klein vs. Groß vs. Programm
 
 #### Kleines Projekt (flache Struktur)
 
@@ -474,6 +501,22 @@ Root-Dokumente mit **Buchstaben-Prefix** (A, B, C...), Unterordner mit **Nummern
 | Software / Website | 01-Anforderungen, 02-Design, 03-Dokumentation |
 
 Unterordner dem User vorschlagen und bestätigen lassen. Nicht overengineeren!
+
+#### Programm (übergeordnete Ebene + Teilprojekte)
+
+Mehrere zusammenhängende Projekte unter einer Klammer. Die Programm-Ebene trägt das **übergreifende** Konzept (eigene CLAUDE.md + A/B/C/F, `A` = Programmbeschreibung); jedes **Teilprojekt** ist intern ein vollständiges großes Projekt. Vollständige Struktur + Regeln → siehe Phase 4, „**Programm: Übergeordnete Ebene + vollständige Teilprojekte**".
+
+```
+[Programm-Ordner]/
+├── CLAUDE.md  +  A/B/C/F (+ G)        ← Programm-Ebene (übergreifend)
+├── [NN-Teilprojekt-1]/  → eigenes großes Projekt (CLAUDE.md + A/B/C/F + Unterordner)
+├── [NN-Teilprojekt-2]/  → eigenes großes Projekt
+└── xold/
+```
+
+**Wann Programm?** Eine Reihe gleichartiger Projekte (Case-Study-Serie, Buchreihe, mehrere Kundenprojekte unter einem Dach, Produktbereich mit Teilprodukten) — wenn ein gemeinsames Konzept/Nomenklatur/Output über mehrere Projekte hinweg gepflegt werden muss.
+
+**Wann NICHT?** Einzelnes Projekt — auch ein großes — bleibt klein/groß. Programm nur, wenn echte Mehrzahl zusammenhängender Projekte existiert oder klar absehbar ist. Bestehendes großes Projekt bei Bedarf später **hochziehen** (Klammer drüber, nicht umbauen).
 
 ---
 
@@ -732,6 +775,7 @@ Bei größeren Projekten als eigene Mini-Phase (Beispiel):
 ## Wichtige Regeln
 
 - **Klein starten:** Im Zweifel flache Struktur. Unterordner ergänzen wenn nötig.
+- **Drei Ebenen:** Klein (flach, Ziffern) → Groß (Buchstaben + Unterordner) → Programm (übergeordnete Ebene + vollständige Teilprojekte). Im Zweifel die kleinere Ebene wählen; später hochziehbar, ohne Bestehendes umzubauen.
 - **Versionierung:** Neue Version = neue Nummer (V01, V02, ...), nie überschreiben
 - **Versionierte Dateien:** Bei neuer Version (z.B. V02) wird die ältere Version (V01) sofort nach `xold/` verschoben. Im Hauptordner liegt immer nur die aktuelle Version. So bleibt der Ordner übersichtlich.
 - **xold-Ordner:** Altes hierhin verschieben statt löschen

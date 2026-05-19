@@ -24,10 +24,20 @@ Before anything happens: **Make sure we're in the right project folder.**
 
 2. **If an argument was passed** (path): Use it.
 
-3. **Identify project type:**
+3. **Identify project type / level:**
    - Numbered root files (01-, 02-...) → **Small project** (flat structure)
    - Letter prefix (A -, B -, C -...) + numbered folders → **Large project**
+   - Letter-prefixed root documents whose `A` is a **program description**, **plus several subproject subfolders that each have their own CLAUDE.md + A/B/C/F** → **Program** (umbrella level + subprojects; PM hierarchy Portfolio › Program › Project — benchmark: `/project-kickoff`)
    - Neither → Note as a finding ("Project structure doesn't match any standard schema")
+
+4. **For a program: clarify review scope.** A program can be reviewed three ways — ask the user (or infer from the argument/context):
+   > "This is a **program** with [N] subprojects. What should I review?
+   > **(a)** only the program level (overarching docs, naming conventions, program↔subproject consistency),
+   > **(b)** one specific subproject (like a large project),
+   > **(c)** the **entire program** (program level + each subproject individually, with a roll-up score)?"
+   - Default if nothing is specified and invoked on a program folder: **(c) full**.
+   - For **(b)**: switch into the subproject folder, then review as a "Large project".
+   - For **(a)/(c)**: continue with Phase 1, section "Program level".
 
 ---
 
@@ -160,6 +170,28 @@ For every contradiction: Identify the source of truth (usually the tasks file or
 - **Does the folder structure fit the project?** Are thematic folders still sensible, or has the project evolved in a different direction?
 - **Overgrown files:** Are there individual files that have grown disproportionately large (>300 lines) and should be split?
 
+### Layer 4: Program Level (programs only)
+
+Only relevant if Phase 0 detected a **program**. A program is reviewed at **two heights**: the umbrella itself AND every subproject.
+
+**A) Check the program umbrella (like a large project, but overarching):**
+- **Program CLAUDE.md:** Does it list all actually existing subproject folders? Is one missing? Is a subproject mentioned that no longer exists?
+- **`A` is a program *description*** (overarching concept), not a single project description — is it correct in substance?
+- **B/C/F at program level:** Do they describe program-wide tasks/logs/decisions — or has subproject detail wrongly landed here (belongs down in the subproject)?
+- **Overarching convention (G, if present, e.g. naming):** does it exist, is it current, do the subprojects adhere to it?
+
+**B) Consistency program ↔ subprojects (the most important program check):**
+- Does each **subproject** have its **own** CLAUDE.md + A/B/C/F + subfolders (= complete large project)?
+- Does each subproject CLAUDE.md **point upward** ("read program `A` first") — and does the program CLAUDE.md **list** the subproject?
+- Naming/abbreviations/scheme consistent across all subprojects (check against G)?
+- No double-maintenance: is the same info kept redundantly at program AND subproject level and drifting apart?
+- Was an existing large project cleanly "pulled up" (umbrella on top) — or unnecessarily rebuilt/renamed (churn = finding)?
+
+**C) Recursion (for scope (c) "entire program"):**
+- For **each subproject** run Phase 1 (Layers 1–3) — like a normal large project.
+- Determine a separate Polish + Impact score per subproject.
+- Collect findings per subproject; keep the program-level findings (A+B) separate.
+
 ---
 
 ## Phase 2: Immediate Fixes — What's Obvious?
@@ -182,6 +214,7 @@ After the assessment: Fix everything that's clearly wrong and can be corrected r
 - Rewrite or shorten content (except CLAUDE.md if obviously too long)
 - Delete files from xold/ (always suggest with rationale)
 - Split the project
+- **Program interventions:** detaching/moving a subproject out of the program, rebuilding the program umbrella, "pulling up" a project into a program, merging subprojects — always only as a suggestion with rationale (cross-reference-break risk)
 
 ---
 
@@ -193,7 +226,7 @@ Output the review report directly in chat. Structure:
 ## Project Review: [PROJECT NAME]
 📅 Date: [DATE]
 📂 Folder: [PATH]
-🔍 Type: [Small/Large]
+🔍 Type: [Small/Large/Program]  ·  for a program: scope [(a) program level only / (b) subproject X / (c) full]
 
 ### Polish Score: [X.X] / 10  [EMOJI]
 
@@ -221,6 +254,26 @@ Output the review report directly in chat. Structure:
 | 👤 "Who does the work?" clarity? | [✅/⚠️/❌] [Note] |
 
 **Impact Summary** (1-2 sentences): [Strategic assessment — are we working on the right things, or polishing grains of sand?]
+
+### 🗂️ Program Roll-up (only for a full program review, scope c)
+
+> The score above assesses the **program umbrella**. Here, additionally, the subprojects individually + a weighted overall picture.
+
+| Level / Subproject | Polish | Impact | Most important finding |
+|---|---|---|---|
+| ▲ Program umbrella | [X.X]/10 | [X.X]/2 | [1 sentence] |
+| 01 [Subproject name] | [X.X]/10 | [X.X]/2 | [1 sentence] |
+| 02 [Subproject name] | [X.X]/10 | [X.X]/2 | [1 sentence] |
+| **Program overall (avg)** | **[X.X]/10** | **[X.X]/2** | [name the weakest link] |
+
+**Program consistency** (umbrella ↔ subprojects):
+| Aspect | Rating |
+|---|---|
+| 📋 Program CLAUDE.md lists all real subprojects? | [✅/⚠️/❌] [Note] |
+| 🔗 Every subproject points up to program `A`? | [✅/⚠️/❌] [Note] |
+| 🏷️ Naming/abbreviations consistent across subprojects (vs. G)? | [✅/⚠️/❌] [Note] |
+| ♻️ No double-maintenance program vs. subproject level? | [✅/⚠️/❌] [Note] |
+| 🧱 Pulled-up projects without needless rebuild (no churn)? | [✅/⚠️/❌] [Note] |
 
 **The 5 Categories in Detail:**
 
@@ -348,6 +401,8 @@ After the summary:
    - Polish Score: [before] → [after]
    ```
 
+   **For a program review (scope c):** write the program-umbrella log into the **program `C`**; additionally, per reviewed subproject, a log entry in its **own `C`** (score + findings per subproject). This keeps every level self-documented.
+
 4. **If all tasks are done → Recalculate score and celebrate the polish achievement!**
 
    Recalculate the score. If it's now at 9+:
@@ -389,3 +444,5 @@ After the summary:
 - **Conservative with deletions:** Rather move to xold/ one too many times than delete one too many times. When actually deleting (cleaning up xold), always suggest — never do it yourself.
 - **The goal is polish:** After the review, the project should feel like it was freshly set up — Claude enjoys working in it, everything is in its place, nothing contradictory, nothing overdue.
 - **No over-engineering:** Don't unnecessarily add files or structures. The project should stay lean, not get bloated.
+- **Know the three levels (partner sync with `/project-kickoff`):** Small (flat, numbers) · Large (letters + subfolders) · Program (umbrella level + complete subprojects, `A` = program description). The review benchmark is exactly the structure `/project-kickoff` creates — both skills must use the same typology.
+- **For programs, two heights:** always assess the program umbrella AND the subprojects separately; the weakest link sets the overall impression. Consistency umbrella↔subprojects is the most important program check.

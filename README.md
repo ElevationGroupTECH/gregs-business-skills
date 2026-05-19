@@ -125,7 +125,7 @@ Verwandle ein chaotisches Brainstorming in ein sauber strukturiertes Projekt. Du
 - **Projektbeschreibung** mit allem was zählt (Ziele, Beteiligte, Zeitrahmen, Technik)
 - **Protokoll** mit Phasen, Meilensteinen, Aufgaben-Tracking und Log-Einträgen
 - **CLAUDE.md** damit Claude genau weiß, was es lesen soll und wie es sich im Projekt verhalten soll
-- **Smarte Größenanpassung** — kleine Projekte bleiben flach, große bekommen Buchstaben-Prefix + nummerierte Unterordner
+- **Smarte Größenanpassung** — kleine Projekte bleiben flach, große bekommen Buchstaben-Prefix + nummerierte Unterordner, Programme eine übergeordnete Ebene über mehrere Teilprojekte
 - **Bewertungsspalten** — Jede Aufgabe wird bewertet: Kann Claude das allein? Wie hoch ist der Impact? Wer muss zuliefern? Wie riskant? Was ist der Rollback?
 - **Verifikation** — drei gezielte Fragen, damit nichts verloren geht
 - **Perspektivwechsel-Check** — raus aus der Macher-Rolle, dein Projekt mit den Augen deiner Zielgruppe sehen
@@ -201,8 +201,8 @@ Die Projekt-Skills gibt es auf **Deutsch** und **Englisch**, die Text-Skills akt
 
 | Deutsch | English | Beschreibung |
 |---|---|---|
-| `/projekt-starten` | `/project-kickoff` | Neues Projekt mit sauberer Struktur aufsetzen |
-| `/projekt-review` | `/project-review` | Bestehendes Projekt bewerten und auf Hochglanz bringen |
+| `/projekt-starten` | `/project-kickoff` | Neues Projekt — oder Programm — mit sauberer Struktur aufsetzen |
+| `/projekt-review` | `/project-review` | Bestehendes Projekt oder Programm bewerten und auf Hochglanz bringen |
 | `/text-wirkungsfilter` | — | Texte Satz für Satz auf Wirkung analysieren und polieren |
 | `/text-subvokalisation` | — | Buttons, Überschriften, Listen für schnelle Erfassung optimieren |
 

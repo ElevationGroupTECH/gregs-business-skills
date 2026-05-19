@@ -1,0 +1,4 @@
+*.bak-*
+*.bak2-*
+*.bak
+.DS_Store

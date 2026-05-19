@@ -19,10 +19,20 @@ Bevor irgendwas passiert: **Sicherstellen, dass wir im richtigen Projektordner s
 
 2. **Falls ein Argument übergeben wurde** (Pfad): Diesen verwenden.
 
-3. **Projekt-Typ erkennen:**
+3. **Projekt-Typ / -Ebene erkennen:**
    - Nummerierte Root-Dateien (01-, 02-...) → **Kleines Projekt** (flache Struktur)
    - Buchstaben-Prefix (A -, B -, C -...) + nummerierte Ordner → **Großes Projekt**
+   - Buchstaben-Prefix-Root-Dokumente, deren `A` eine **Programmbeschreibung** ist, **plus mehrere Teilprojekt-Unterordner, die selbst je eine eigene CLAUDE.md + A/B/C/F haben** → **Programm** (übergeordnete Ebene + Teilprojekte; PM-Hierarchie Portfolio › Programm › Projekt — Maßstab: `/projekt-starten`)
    - Keines von beiden → Notieren als Finding ("Projektstruktur entspricht keinem Standard-Schema")
+
+4. **Bei Programm: Review-Umfang klären.** Ein Programm kann auf drei Arten reviewt werden — den User fragen (oder aus dem Argument/Kontext ableiten):
+   > „Das ist ein **Programm** mit [N] Teilprojekten. Was soll ich reviewen?
+   > **(a)** nur die Programm-Ebene (übergreifende Doku, Nomenklatur, Konsistenz Programm↔Teilprojekte),
+   > **(b)** ein bestimmtes Teilprojekt (wie ein großes Projekt),
+   > **(c)** das **komplette Programm** (Programm-Ebene + jedes Teilprojekt einzeln, mit Roll-up-Score)?"
+   - Default wenn keine Angabe und Aufruf auf Programm-Ordner: **(c) komplett**.
+   - Bei **(b)**: in den Teilprojekt-Ordner wechseln, dann als „Großes Projekt" reviewen.
+   - Bei **(a)/(c)**: weiter mit Phase 1, Abschnitt „Programm-Ebene".
 
 ---
 
@@ -155,6 +165,28 @@ Bei jedem Widerspruch: Die Quelle der Wahrheit identifizieren (meist die Aufgabe
 - **Passt die Ordnerstruktur zum Projekt?** Sind die thematischen Ordner noch sinnvoll, oder hat sich das Projekt in eine andere Richtung entwickelt?
 - **Gewachsene Dateien:** Gibt es einzelne Dateien, die unverhältnismäßig groß geworden sind (>300 Zeilen) und aufgeteilt werden sollten?
 
+### Ebene 4: Programm-Ebene (nur bei Programmen)
+
+Nur relevant, wenn Phase 0 ein **Programm** erkannt hat. Ein Programm reviewt man auf **zwei Höhen**: die Klammer selbst UND jedes Teilprojekt.
+
+**A) Programm-Klammer prüfen (wie ein großes Projekt, aber übergreifend):**
+- **Programm-CLAUDE.md:** Listet sie alle real existierenden Teilprojekt-Ordner? Fehlt eines? Wird ein Teilprojekt erwähnt, das es nicht (mehr) gibt?
+- **`A` ist Programm*beschreibung*** (übergreifendes Konzept), nicht eine einzelne Projektbeschreibung — inhaltlich korrekt?
+- **B/C/F auf Programm-Ebene:** Beschreiben sie programmweite Aufgaben/Logs/Entscheidungen — oder ist dort fälschlich Teilprojekt-Detail gelandet (gehört runter ins Teilprojekt)?
+- **Übergreifende Konvention (G, falls vorhanden, z.B. Nomenklatur):** existiert sie, ist sie aktuell, halten sich die Teilprojekte daran?
+
+**B) Konsistenz Programm ↔ Teilprojekte (der wichtigste Programm-Check):**
+- Jedes **Teilprojekt** hat eine **eigene** CLAUDE.md + A/B/C/F + Unterordner (= vollständiges großes Projekt)?
+- Jede Teilprojekt-CLAUDE.md **verweist nach oben** („Programm-`A` zuerst lesen") — und die Programm-CLAUDE.md **listet** das Teilprojekt?
+- Nomenklatur/Kürzel/Namensschema über alle Teilprojekte hinweg einheitlich (gegen G abgleichen)?
+- Keine Doppelpflege: steht dieselbe Info redundant auf Programm- UND Teilprojekt-Ebene und läuft auseinander?
+- Wurde ein bestehendes großes Projekt sauber „hochgezogen" (Klammer drüber) — oder unnötig umgebaut/umbenannt (Churn = Finding)?
+
+**C) Rekursion (bei Umfang (c) „komplettes Programm"):**
+- Für **jedes Teilprojekt** Phase 1 (Ebenen 1–3) durchführen — wie ein normales großes Projekt.
+- Pro Teilprojekt einen eigenen Hochglanz- + Impact-Score ermitteln.
+- Findings je Teilprojekt sammeln; zusätzlich die Programm-Ebene-Findings (A+B) separat halten.
+
 ---
 
 ## Phase 2: Sofort-Reparaturen — Was ist offensichtlich?
@@ -177,6 +209,7 @@ Nach der Bestandsaufnahme: Alles was eindeutig falsch ist und risikolos korrigie
 - Inhalte umschreiben oder kürzen (außer CLAUDE.md wenn offensichtlich zu lang)
 - Dateien aus xold/ löschen (immer als Vorschlag mit Begründung)
 - Projekt splitten
+- **Programm-Eingriffe:** Teilprojekt aus dem Programm lösen/verschieben, Programm-Klammer umbauen, ein Projekt zum Programm „hochziehen", Teilprojekte zusammenlegen — immer nur als Vorschlag mit Begründung (Querverweis-Bruch-Risiko)
 
 ---
 
@@ -188,7 +221,7 @@ Den Review-Bericht direkt im Chat ausgeben. Struktur:
 ## Projekt-Review: [PROJEKTNAME]
 📅 Datum: [DATUM]
 📂 Ordner: [PFAD]
-🔍 Typ: [Klein/Groß]
+🔍 Typ: [Klein/Groß/Programm]  ·  bei Programm: Umfang [(a) nur Programm-Ebene / (b) Teilprojekt X / (c) komplett]
 
 ### Hochglanz-Score: [X.X] / 10  [EMOJI]
 
@@ -216,6 +249,26 @@ Den Review-Bericht direkt im Chat ausgeben. Struktur:
 | 👤 „Wer macht den Aufwand?"-Klarheit? | [✅/⚠️/❌] [Notiz] |
 
 **Impact-Summary** (1-2 Sätze): [Strategische Bewertung — arbeiten wir an den richtigen Sachen, oder polieren wir Sandkörner?]
+
+### 🗂️ Programm-Roll-up (nur bei komplettem Programm-Review, Umfang c)
+
+> Der oben stehende Score bewertet die **Programm-Klammer**. Hier zusätzlich die Teilprojekte einzeln + ein gewichtetes Gesamtbild.
+
+| Ebene / Teilprojekt | Hochglanz | Impact | Wichtigstes Finding |
+|---|---|---|---|
+| ▲ Programm-Klammer | [X.X]/10 | [X.X]/2 | [1 Satz] |
+| 01 [Teilprojekt-Name] | [X.X]/10 | [X.X]/2 | [1 Satz] |
+| 02 [Teilprojekt-Name] | [X.X]/10 | [X.X]/2 | [1 Satz] |
+| **Programm gesamt (Ø)** | **[X.X]/10** | **[X.X]/2** | [schwächstes Glied benennen] |
+
+**Programm-Konsistenz** (Klammer ↔ Teilprojekte):
+| Aspekt | Bewertung |
+|---|---|
+| 📋 Programm-CLAUDE.md listet alle realen Teilprojekte? | [✅/⚠️/❌] [Notiz] |
+| 🔗 Jedes Teilprojekt verweist nach oben auf Programm-`A`? | [✅/⚠️/❌] [Notiz] |
+| 🏷️ Nomenklatur/Kürzel über alle Teilprojekte einheitlich (vs. G)? | [✅/⚠️/❌] [Notiz] |
+| ♻️ Keine Doppelpflege Programm- vs. Teilprojekt-Ebene? | [✅/⚠️/❌] [Notiz] |
+| 🧱 Hochgezogene Projekte ohne unnötigen Umbau (kein Churn)? | [✅/⚠️/❌] [Notiz] |
 
 **Die 5 Kategorien im Detail:**
 
@@ -343,6 +396,8 @@ Nach der Zusammenfassung:
    - Hochglanz-Score: [vorher] → [nachher]
    ```
 
+   **Bei Programm-Review (Umfang c):** Den Programm-Klammer-Log in die **Programm-`C`** schreiben; zusätzlich pro reviewtem Teilprojekt einen Log-Eintrag in dessen **eigene `C`** (Score + Findings je Teilprojekt). So bleibt jede Ebene selbst-dokumentiert.
+
 4. **Wenn alle Aufgaben erledigt sind → Neuen Score berechnen und Hochglanz-Abschluss feiern!**
 
    Den Score neu berechnen. Wenn er jetzt bei 9+ liegt:
@@ -384,3 +439,5 @@ Nach der Zusammenfassung:
 - **Konservativ bei Löschungen:** Lieber einmal zu viel nach xold/ verschieben als einmal zu viel löschen. Bei echtem Löschen (xold bereinigen) immer vorschlagen, nie selbst machen.
 - **Das Ziel ist Hochglanz:** Nach dem Review soll das Projekt sich anfühlen wie frisch aufgesetzt — Claude arbeitet gerne darin, alles ist an seinem Platz, nichts widersprüchlich, nichts überfällig.
 - **Kein Overengineering:** Nicht unnötig Dateien oder Strukturen hinzufügen. Das Projekt soll schlank bleiben, nicht aufgebläht werden.
+- **Drei Ebenen kennen (Partner-Gleichklang mit `/projekt-starten`):** Klein (flach, Ziffern) · Groß (Buchstaben + Unterordner) · Programm (übergeordnete Ebene + vollständige Teilprojekte, `A` = Programmbeschreibung). Der Review-Maßstab ist exakt die Struktur, die `/projekt-starten` anlegt — beide Skills müssen dieselbe Typologie verwenden.
+- **Bei Programmen zwei Höhen:** Immer Programm-Klammer UND Teilprojekte getrennt bewerten; das schwächste Glied bestimmt den Gesamteindruck. Konsistenz Klammer↔Teilprojekte ist der wichtigste Programm-Check.

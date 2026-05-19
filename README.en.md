@@ -109,7 +109,7 @@ Turn a chaotic brain dump into a properly structured project. You talk, Claude o
 - **Project description** with all the details that matter (goals, people, timeline, tech stack)
 - **Changelog** with phases, milestones, task tracking, and log entries
 - **CLAUDE.md** so Claude knows exactly what to read and how to behave in your project
-- **Smart sizing** — small projects stay flat, large ones get letter-prefixed docs + numbered subfolders
+- **Smart sizing** — small projects stay flat, large ones get letter-prefixed docs + numbered subfolders, and programs get an umbrella level over multiple subprojects
 - **Assessment columns** — Every task gets assessed: Can Claude handle it alone? What's the impact? Who needs to deliver? How risky? What's the rollback?
 - **Verification** — three targeted questions to make sure nothing was lost in translation
 - **Perspective shift check** — step out of creator mode, look at your project through your customer's eyes
@@ -185,8 +185,8 @@ The project skills are available in **English** and **German**, the text skills 
 
 | English | Deutsch | Description |
 |---|---|---|
-| `/project-kickoff` | `/projekt-starten` | Set up a new project with proper structure |
-| `/project-review` | `/projekt-review` | Score and polish an existing project |
+| `/project-kickoff` | `/projekt-starten` | Set up a new project — or program — with proper structure |
+| `/project-review` | `/projekt-review` | Score and polish an existing project or program |
 | — | `/text-wirkungsfilter` | Analyze any text sentence by sentence and polish it |
 | — | `/text-subvokalisation` | Optimize buttons, headlines, lists for fast scanning |
 

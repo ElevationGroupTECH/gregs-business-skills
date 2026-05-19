@@ -132,14 +132,15 @@ This is the most important step. The user will typically send a **voice message*
    ◆ M3: Book published                 ⬜ open
    ```
 
-9. **Determine project size:**
+9. **Determine project size / level:**
    Ask the user (or estimate yourself):
-   > "Is this rather a small or large project?"
+   > "Is this a small project, a large project — or a **program** (an overarching umbrella over several related subprojects)?"
 
    **Small** = workshop, single campaign, manageable scope, few files expected
    **Large** = book, congress, course with many modules, software — many files from different areas
+   **Program** = several related projects that serve a shared goal and are coordinated together. Standard project-management hierarchy: **Portfolio › Program › Project** (PMI/IPMA). Examples: a series of case studies, a book series, several parallel client projects under one roof, a product area with multiple sub-products.
 
-   When in doubt: **start small.** You can always add subfolders later.
+   When in doubt: **start small.** You can always add subfolders later — and a large project can later be **"pulled up" into a program** by laying a program level on top (existing projects become subprojects — do **not** restructure/rename, just add the umbrella).
 
 ---
 
@@ -181,6 +182,32 @@ For large projects with thematic subfolders, numbered root files (01-, 02-) coll
 ```
 
 **Rule:** The letter files (A, B, C...) are the documents Claude reads at every session start. Numbers (01-, 02-...) are for subfolders.
+
+##### Program: Umbrella Level + Complete Subprojects
+
+A **program** is the umbrella over several related projects (PM hierarchy **Portfolio › Program › Project**). You can work **inside a subproject** (advancing one concrete project) **or in the program** (overarching concept, naming conventions, analysis, creating new subprojects).
+
+```
+[Program folder]/
+├── CLAUDE.md                                   ← Program entry point (lists subprojects, points down)
+├── A - Program-Description-[NAME]-V01.md       ← overarching concept (always read)
+├── B - Tasks-[NAME].md                         ← program-wide tasks/milestones
+├── C - Changelog-[NAME].md                     ← log index + logs
+├── F - Decisions-[NAME].md                     ← decision log (recommended)
+├── G - [overarching convention].md             ← optional, e.g. naming/standards
+├── [NN-Subproject-1]/                          ← each a complete "large project"
+│   ├── CLAUDE.md  +  A/B/C/F  +  thematic subfolders
+├── [NN-Subproject-2]/
+├── ...
+└── xold/
+```
+
+**Program rules:**
+- The program level has its **own** CLAUDE.md + A/B/C/F (same letter logic as a large project). Focus: the overarching layer — concept, naming conventions, output strategy, creating/managing subprojects. Here `A` is the **program description** (not a project description).
+- Each **subproject** is internally a complete large project with its **own** CLAUDE.md + A/B/C/F + subfolders. The subproject CLAUDE.md points upward ("read program A first"); the program CLAUDE.md lists the subprojects.
+- **When working in a subproject:** read the program `A` (concept) first, then the subproject CLAUDE.md/A/B.
+- **Pulling up an existing large project:** do NOT restructure/rename (churn risk). Just lay the program umbrella on top; the existing project becomes a subproject.
+- **Don't over-engineer:** only choose program when several related projects truly exist or are clearly foreseeable. A single project stays small/large.
 
 ---
 
@@ -419,7 +446,7 @@ E.g. sitemap, style guide, methodology guide, participant list, marketing copy, 
 
 ---
 
-### Structuring: Small vs. Large
+### Structuring: Small vs. Large vs. Program
 
 #### Small project (flat structure)
 
@@ -474,6 +501,22 @@ Root documents with **letter prefix** (A, B, C...), subfolders with **numbers** 
 | Software / Website | 01-Requirements, 02-Design, 03-Documentation |
 
 Suggest subfolders to the user and confirm. Don't over-engineer!
+
+#### Program (umbrella level + subprojects)
+
+Several related projects under one umbrella. The program level carries the **overarching** concept (its own CLAUDE.md + A/B/C/F, `A` = program description); each **subproject** is internally a complete large project. Full structure + rules → see Phase 4, "**Program: Umbrella Level + Complete Subprojects**".
+
+```
+[Program folder]/
+├── CLAUDE.md  +  A/B/C/F (+ G)        ← program level (overarching)
+├── [NN-Subproject-1]/  → own large project (CLAUDE.md + A/B/C/F + subfolders)
+├── [NN-Subproject-2]/  → own large project
+└── xold/
+```
+
+**When a program?** A series of similar projects (case-study series, book series, several client projects under one roof, a product area with sub-products) — when a shared concept/naming/output must be maintained across multiple projects.
+
+**When NOT?** A single project — even a large one — stays small/large. Program only when a real plurality of related projects exists or is clearly foreseeable. Pull up an existing large project later if needed (umbrella on top, no rebuild).
 
 ---
 
@@ -732,6 +775,7 @@ For larger projects as own mini-phase (example):
 ## Important rules
 
 - **Start small:** When in doubt, flat structure. Add subfolders when needed.
+- **Three levels:** Small (flat, numbers) → Large (letters + subfolders) → Program (umbrella level + complete subprojects). When in doubt pick the smaller level; pull up later without rebuilding what exists.
 - **Versioning:** New version = new number (V01, V02, ...), never overwrite
 - **Versioned files:** When a new version (e.g. V02) appears, the older version (V01) immediately moves to `xold/`. Only the current version stays in the main folder. Keeps it clean.
 - **xold folder:** Move old here instead of deleting
