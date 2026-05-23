@@ -210,3 +210,26 @@ Warum separat bei Büchern? Weil Buchkapitel länger sind, mehr Kontext haben, u
 - Polierte Version: `[ordner]/wirkungs-analyse-[name]-poliert.html`
 
 Wenn kein Ordner angegeben: im aktuellen Projektordner unter `04-Assets/` oder dem nächstliegenden sinnvollen Ort.
+
+---
+
+## 🔄 Selbstverbesserung — nach jedem Durchlauf
+
+Dieser Skill verbessert sich selbst. **Nach jedem vollständigen Durchlauf** kurz innehalten und ehrlich reflektieren:
+
+- **Was lief gut?** Was ging glatt und schnell — was unbedingt so behalten?
+- **Was lief schlecht?** Wo bin ich hängengeblieben, was hat nicht geklappt, wo gab es Reibung, Fehler oder Unklarheit?
+- **Warum?** Was war die Ursache — fehlende Info, unklarer Schritt, technisches Problem?
+- **Wie beim nächsten Mal besser?** Was hätte ich gebraucht, um es schneller, sauberer und fehlerfrei zu machen?
+
+**Dann handeln:**
+- **Kleine, klare Verbesserungen** (Tippfehler, fehlender Hinweis, schärfere Formulierung, neuer Sonderfall) → sofort selbst in diesen Skill eintragen und unten im Änderungslog vermerken.
+- **Größere Änderungen** (anderer Ablauf, neue Schritte, struktureller Umbau) → dem Nutzer vorschlagen und auf Freigabe warten, bevor sie eingebaut werden.
+
+So wird der Skill mit jedem Einsatz schärfer. Lieber eine kleine Verbesserung zu viel als eine zu wenig.
+
+### Änderungslog
+
+| Datum | Was verbessert | Auslöser |
+|-------|----------------|----------|
+| — | (noch keine Einträge) | — |

@@ -446,3 +446,26 @@ After the summary:
 - **No over-engineering:** Don't unnecessarily add files or structures. The project should stay lean, not get bloated.
 - **Know the three levels (partner sync with `/project-kickoff`):** Small (flat, numbers) · Large (letters + subfolders) · Program (umbrella level + complete subprojects, `A` = program description). The review benchmark is exactly the structure `/project-kickoff` creates — both skills must use the same typology.
 - **For programs, two heights:** always assess the program umbrella AND the subprojects separately; the weakest link sets the overall impression. Consistency umbrella↔subprojects is the most important program check.
+
+---
+
+## 🔄 Self-improvement — after every run
+
+This skill improves itself. **After every full run**, pause briefly and reflect honestly:
+
+- **What went well?** What ran smoothly and fast — what should definitely stay?
+- **What went badly?** Where did I get stuck, what didn't work, where was there friction, error, or confusion?
+- **Why?** What was the cause — missing info, unclear step, technical problem?
+- **How to do better next time?** What would have helped me work faster, cleaner, and error-free?
+
+**Then act:**
+- **Small, clear improvements** (typo, missing hint, sharper wording, new edge case) → enter into this skill yourself right away and note it in the changelog below.
+- **Larger changes** (different flow, new steps, structural rebuild) → propose them to the user and wait for approval before building them in.
+
+That way the skill gets sharper with every use. Better one small improvement too many than one too few.
+
+### Changelog
+
+| Date | What improved | Trigger |
+|------|---------------|---------|
+| — | (no entries yet) | — |
