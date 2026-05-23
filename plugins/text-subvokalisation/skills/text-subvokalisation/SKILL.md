@@ -31,7 +31,7 @@ Schlecht strukturierter Text in solchen Elementen **bricht die Mustererkennung**
 
 ---
 
-## Die 4 Regeln
+## Die 5 Regeln
 
 ### Regel 1: Einzeiligkeit ist King (70-80% Wichtigkeit)
 
@@ -61,7 +61,20 @@ Das **Schlüsselwort** kommt als ERSTES Wort. Einleitungen sind Information-Kill
 
 **Fett-Formatierung** auf das Keyword verstärkt den Effekt. In einer Gruppe von 4 Antworten scannt das Auge dann nur: **Läuft / Zu viel / Am Limit / Zäh**.
 
-### Regel 4: Visuelle Gleichheit unter Geschwistern
+### Regel 4: Zahlen als Zahlen (nicht als Wort)
+
+Zahlen IMMER als Ziffer schreiben, NICHT ausgeschrieben. Das Auge erkennt Ziffern in <50 ms, Wörter brauchen Subvokalisierung.
+
+| Schlecht | Gut |
+|---|---|
+| Drei Säulen der Zeitmaschine | 3 Säulen der Zeitmaschine |
+| Zwei Stunden, zwei Themen | 2 Stunden · 2 Themen |
+| Faustregel — 3× gleicher Prompt = ein Skill | Faustregel — 3x gleicher Prozess = 1 Skill |
+| Sieben Sessions | 7 Sessions |
+
+**Ausnahme:** Wenn die Zahl Teil eines feststehenden Begriffs ist und so im Sprachgebrauch zwingend gehört (z. B. „Eins-zu-Eins-Gespräch" als Eigenname). In Listen, Bullets, Headlines, Buttons aber **immer** Ziffer.
+
+### Regel 5: Visuelle Gleichheit unter Geschwistern
 
 Alle Elemente einer Gruppe haben die **gleiche Textstruktur**:
 - Gleiche Zeilenanzahl
@@ -81,12 +94,12 @@ Alle Elemente einer Gruppe haben die **gleiche Textstruktur**:
 
 ### Als Standalone (`/subvokalisationssperre`):
 1. User gibt Texte (Buttons, Liste, Überschriften etc.)
-2. Alle 4 Regeln anwenden
+2. Alle 5 Regeln anwenden
 3. Optimierte Version ausgeben mit Erklärung pro Änderung
 4. Vorher/Nachher-Vergleich zeigen
 
 ### Automatisch (wenn Claude selbst generiert):
-Immer wenn Claude UI-Elemente, Buttons, Listen, Quiz-Fragen, Tab-Labels, Menüpunkte, CTAs oder Überschriften generiert — automatisch die 4 Regeln anwenden. Kein separater Aufruf, keine Rückfrage. Einfach direkt richtig machen.
+Immer wenn Claude UI-Elemente, Buttons, Listen, Quiz-Fragen, Tab-Labels, Menüpunkte, CTAs oder Überschriften generiert — automatisch alle 5 Regeln anwenden. Kein separater Aufruf, keine Rückfrage. Einfach direkt richtig machen.
 
 Gilt besonders für:
 - Quiz-Fragen und Antwort-Optionen
@@ -103,6 +116,7 @@ Gilt besonders für:
 
 - [ ] Passt jedes Element in eine Zeile?
 - [ ] Steht das Keyword am Anfang?
+- [ ] Sind alle Zahlen als Ziffern (nicht ausgeschrieben)?
 - [ ] Sind alle Geschwister-Elemente visuell gleich?
 - [ ] Keine unkontrollierten Umbrüche?
 
@@ -127,4 +141,4 @@ So wird der Skill mit jedem Einsatz schärfer. Lieber eine kleine Verbesserung z
 
 | Datum | Was verbessert | Auslöser |
 |-------|----------------|----------|
-| — | (noch keine Einträge) | — |
+| 23.05.2026 | Neue Regel 4: Zahlen als Zahlen (nicht ausgeschrieben). Qualitätscheck ergänzt. | Folien Session 05: „zwei Stunden, zwei Themen" → „2 Stunden · 2 Themen". Feedback Gregor. |
