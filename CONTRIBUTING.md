@@ -38,7 +38,7 @@ from an out-of-date local copy. Avoid that:
    `README.en.md` in sync if user-facing capabilities changed. `README.de.md` no longer
    exists — the German README is `README.md`.
 5. **Never `git push --force`** on `main` (multi-session repo). Always create a
-   `backup/...` branch before reset/rebase. In doubt: `git rebase --abort` → ask Gregor.
+   `backup/...` branch before reset/rebase. In doubt: `git rebase --abort` → ask the maintainer.
 6. **Pre-push sanity gate (mandatory):** `git diff origin/main --stat` must show only the
    intended change (e.g. the new feature lines + 4× plugin.json + README one-liners).
    If full-body changes appear, body noise leaked → stop and redo.

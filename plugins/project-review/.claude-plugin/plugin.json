@@ -3,7 +3,7 @@
   "displayName": "Project Review — Polish Check",
   "description": "Bring a grown project or program back to a polished state — score, automatic fixes, concrete recommendations. Partner of /project-kickoff. English version.",
   "language": "en",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "skills": [
     "skills/project-review"
   ]

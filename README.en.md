@@ -4,7 +4,7 @@
 <td width="160"><img src="assets/gregs-business-skills-hero.png" alt="Greg's Business Skills" width="140"></td>
 <td>
 
-# Greg's Business Skills **v1.3.0**
+# Greg's Business Skills **v2.0.0**
 
 **Like Neo downloading kung fu in The Matrix — except it's business skills. Plug in, download structure, go.**
 
@@ -45,16 +45,16 @@ Install both. Your future self will thank you.
 
 ---
 
-## Greg's Text-Toolkit ✍️ (German only for now)
+## Greg's Text-Toolkit ✍️
 
 **Texts that land. Buttons people can scan.**
 
 Two skills for everyone who writes copy that needs to actually work — not just be grammatically correct:
 
-- **`/text-wirkungsfilter`** — analyzes any text sentence by sentence on emotional impact (5-step color scale), strips fillers, and ships a polished version.
-- **`/text-subvokalisation`** — optimizes buttons, headlines, lists, labels, and CTAs for fast visual scanning so readers don't have to subvocalize.
+- **`/text-impact-filter`** — analyzes any text sentence by sentence on emotional impact (5-level color scale), strips fillers, and ships a polished version.
+- **`/text-subvocalization`** — optimizes buttons, headlines, lists, labels, and CTAs for fast visual scanning so readers don't have to subvocalize.
 
-Currently German only. English versions may follow if there's demand.
+Available in **English** (`/text-impact-filter`, `/text-subvocalization`) and **German** (`/text-wirkungsfilter`, `/text-subvokalisation`).
 
 ---
 
@@ -72,8 +72,10 @@ Done. Claude finds the SKILL.md files and puts them where they belong.
 
 **Or copy them manually:**
 ```
-plugins/project-kickoff/skills/project-kickoff/SKILL.md  -->  ~/.claude/commands/project-kickoff.md
-plugins/project-review/skills/project-review/SKILL.md    -->  ~/.claude/commands/project-review.md
+plugins/project-kickoff/skills/project-kickoff/SKILL.md           -->  ~/.claude/commands/project-kickoff.md
+plugins/project-review/skills/project-review/SKILL.md             -->  ~/.claude/commands/project-review.md
+plugins/text-impact-filter/skills/text-impact-filter/SKILL.md     -->  ~/.claude/commands/text-impact-filter.md
+plugins/text-subvocalization/skills/text-subvocalization/SKILL.md -->  ~/.claude/commands/text-subvocalization.md
 ```
 
 Then restart Claude Code or type `/commands` to verify.
@@ -92,8 +94,10 @@ Then restart Claude Code or type `/commands` to verify.
 /plugin install project-review@gregs-business-skills       # English
 /plugin install projekt-starten@gregs-business-skills      # Deutsch
 /plugin install projekt-review@gregs-business-skills       # Deutsch
-/plugin install text-wirkungsfilter@gregs-business-skills  # Deutsch only
-/plugin install text-subvokalisation@gregs-business-skills # Deutsch only
+/plugin install text-impact-filter@gregs-business-skills   # English
+/plugin install text-subvocalization@gregs-business-skills # English
+/plugin install text-wirkungsfilter@gregs-business-skills  # Deutsch
+/plugin install text-subvokalisation@gregs-business-skills # Deutsch
 ```
 
 Then just run `/project-kickoff` or `/project-review` in any Claude Code session.
@@ -187,8 +191,8 @@ The project skills are available in **English** and **German**, the text skills 
 |---|---|---|
 | `/project-kickoff` | `/projekt-starten` | Set up a new project — or program — with proper structure |
 | `/project-review` | `/projekt-review` | Score and polish an existing project or program |
-| — | `/text-wirkungsfilter` | Analyze any text sentence by sentence and polish it |
-| — | `/text-subvokalisation` | Optimize buttons, headlines, lists for fast scanning |
+| `/text-impact-filter` | `/text-wirkungsfilter` | Analyze any text sentence by sentence and polish it |
+| `/text-subvocalization` | `/text-subvokalisation` | Optimize buttons, headlines, lists for fast scanning |
 
 ---
 

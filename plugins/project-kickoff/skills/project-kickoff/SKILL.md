@@ -5,7 +5,7 @@ description: Set up new projects properly — structure, description, changelog,
 
 # Project Kickoff
 
-This skill sets up a new project cleanly — with project description, log file, CLAUDE.md, and a clean structure. Based on the methodology from "AI in Online Business Session 04" (Gregor Dorsch, 2026-03-16).
+This skill sets up a new project cleanly — with project description, log file, CLAUDE.md, and a clean structure. Based on a proven methodology for cleanly setting up business projects with AI.
 
 > **Part of a pair:** This skill starts projects clean. Its partner `/project-review` (alias `/review-project`) keeps them clean — with a polish score, automatic fixes, and honest feedback. Together they form a cycle: Start → Work → Review → Clean → Continue working.
 
@@ -22,7 +22,7 @@ Value = Impact (effect on the business goal) ÷ Resources (Money + Time + Emotio
 ### Three resource dimensions — consider for every task evaluation
 
 1. **💰 Money** — licenses, tools, external service providers, purchases
-2. **⏰ Time** — Gregor, Nadine, team, maintenance, handover, learning curve
+2. **⏰ Time** — you, your team, maintenance, handover, learning curve
 3. **💚 Emotion** — annoyance factor, frustration, energy. **Most often underestimated resource.** When work is annoying or a setup is fragile and complicated, that destroys more value than any money saving brings.
 
 ### Impact hierarchy
@@ -33,11 +33,11 @@ Value = Impact (effect on the business goal) ÷ Resources (Money + Time + Emotio
 
 ### Additional filters
 
-- **Wife test:** Could Nadine handle this in an emergency without Gregor? → if no, reduce complexity.
+- **Layperson test** (in software terms, the "least knowledgeable user" test): could someone with zero prior knowledge operate this in an emergency? → if no, reduce complexity.
 - **Compound effects:** Some levers multiply (SEO × Content × Backlinks). Those first.
 - **Opportunity costs:** What are we NOT doing if we do this?
 - **Whole-system optimization:** Does this affect the system, or only a component that was already fine?
-- **Who does the work?** Gregor/Nadine = expensive. Claude = free at night. Automated > one-off.
+- **Who does the work?** You/your team = expensive. Claude = around the clock and cheap. Automated > one-off.
 
 ### Consequence for every newly created project
 
@@ -101,7 +101,7 @@ This is the most important step. The user will typically send a **voice message*
    - **Don't just reference — actually save it in `04-Sources/` (or appropriate subfolder) as a structured `.md` file:**
      - Naming: `YYYY-MM-DD-Speak-Transcript-[short-title].md`
      - Layout: frontmatter (ID, date, speakers), summary of key points, quotes block (for marketing), full-text reference
-   - Identify speakers (Greg is usually Speaker 1) and label them by name in the summary where derivable
+   - Identify speakers (the project owner is usually Speaker 1) and label them by name in the summary where derivable
    - Reference as source material in `A - Project Description` and `D - Methodology` (or matching docs)
 
    **Why save instead of just referencing?** Transcript IDs can change, the Speak app may be offline, and the project should explain itself even without Speak access. Copying once into the project stabilizes the source.
@@ -183,6 +183,8 @@ For large projects with thematic subfolders, numbered root files (01-, 02-) coll
 
 **Rule:** The letter files (A, B, C...) are the documents Claude reads at every session start. Numbers (01-, 02-...) are for subfolders.
 
+**Workbench folder (mandatory for large projects):** Every large project also gets a numbered **workbench folder** — as the **last number** of the thematic folders (e.g. `07-Workbench` when 01–06 are taken). Purpose: the ONLY place for temporary things (test screenshots, snapshot dumps, throwaway scripts, intermediate results) — so the top project level stays clean (only project files + numbered folders live there). Rules (belong in the workbench as a `README.md`): ① nothing permanent here, ② put-back duty — whoever puts something down clears it away once the task is done, ③ never reference it from project files, ④ a workbench not emptied → empty it at the next `/project-review`. Difference from `xold/`: workbench = active work, emptied immediately; `xold/` = archive / trash antechamber. For **small projects** (flat) the workbench is optional — create it only when temporary artifacts are foreseeable.
+
 ##### Program: Umbrella Level + Complete Subprojects
 
 A **program** is the umbrella over several related projects (PM hierarchy **Portfolio › Program › Project**). You can work **inside a subproject** (advancing one concrete project) **or in the program** (overarching concept, naming conventions, analysis, creating new subprojects).
@@ -253,7 +255,7 @@ Contains everything: task tables, milestones, log index, logs.
 |---|---|---|---|---|---|---|---|---|
 | [PRE]-01 | 📄 Create homepage | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟢 | — | 🟢 | — | ✅ Done |
 | [PRE]-02 | Configure robots.txt | ✅ | 🟡 | 💰🟢 ⏰🟢 💚🟢 | — | 🟢 | Revert | ⬜ Open |
-| [PRE]-03 | ⚙️ Code review Phase 1 | ✅ | 🟡 | 💰🟢 ⏰🟡 💚🟢 | Gregor: sign-off | 🟢 | — | ⬜ Open |
+| [PRE]-03 | ⚙️ Code review Phase 1 | ✅ | 🟡 | 💰🟢 ⏰🟡 💚🟢 | Boss: sign-off | 🟢 | — | ⬜ Open |
 | ◆ | **Milestone: [MEASURABLE RESULT]** | | | | | | | ⬜ Open |
 
 ## Milestones (overview)
@@ -296,7 +298,7 @@ For large projects, task descriptions and logs grow independently. Both in one f
 |---|---|---|---|---|---|---|---|---|
 | [PRE]-01 | 📄 Create homepage | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟢 | — | 🟢 | — | ✅ Done |
 | [PRE]-02 | ⚙️ Complex component (→ see Task description) | ✅ | 🔴 | 💰🟢 ⏰🔴 💚🟡 | — | 🟡 | Revert | ⬜ Open |
-| [PRE]-03 | ⚙️ Code review Phase 1 | ✅ | 🟡 | 💰🟢 ⏰🟡 💚🟢 | Gregor: sign-off | 🟢 | — | ⬜ Open |
+| [PRE]-03 | ⚙️ Code review Phase 1 | ✅ | 🟡 | 💰🟢 ⏰🟡 💚🟢 | Boss: sign-off | 🟢 | — | ⬜ Open |
 | ◆ | **Milestone: [MEASURABLE RESULT]** | | | | | | | ⬜ Open |
 
 ## Task descriptions
@@ -357,7 +359,7 @@ For large projects, task descriptions and logs grow independently. Both in one f
    | Claude | Can Claude do the task solo? | ✅ = yes, solo \| ⚠️ = partial (needs input) \| ❌ = no (human needed) \| — = n/a |
    | Impact | How much does the task contribute to goal? | 🔴 high \| 🟡 medium \| 🟢 low |
    | Effort | 3-dimensional resource estimate | 💰[level] money / ⏰[level] time / 💚[level] emotion (each 🟢 low / 🟡 medium / 🔴 high) |
-   | Needs | Who must deliver / review / approve? | Text (e.g. "Gregor: review") or "—" if solo |
+   | Needs | Who must deliver / review / approve? | Text (e.g. "Boss: review") or "—" if solo |
    | Risk | How high is breakage risk? | 🔴 high \| 🟡 medium \| 🟢 low |
    | Rollback | What to do if something fails? | Short text, or "—" if risk-free |
 
@@ -439,6 +441,10 @@ For larger projects, create a decision log. Documents the **why** behind importa
 
 #### e) `xold/` — Trash folder (always create)
 
+#### e2) `[NN]-Workbench/` — temporary work area (always create for large projects)
+
+As the **last numbered folder** (next free number after the thematic folders) create a **workbench** — including a `README.md` with the 4 rules (nothing permanent · put-back duty: whoever puts something down clears it away · never reference it · a full workbench gets emptied at the `/project-review`). It is the ONLY allowed place for temporary things (test screenshots, dumps, throwaway scripts) — this keeps the top project level permanently clean. Workbench ≠ `xold/` (workbench = active session storage, emptied immediately; `xold/` = trash antechamber). For small (flat) projects it's optional.
+
 #### Additional files as needed:
 
 More files numbered consecutively (small: `03-...`, `04-...` / large: `C -`, `D -` etc.).
@@ -517,6 +523,20 @@ Several related projects under one umbrella. The program level carries the **ove
 **When a program?** A series of similar projects (case-study series, book series, several client projects under one roof, a product area with sub-products) — when a shared concept/naming/output must be maintained across multiple projects.
 
 **When NOT?** A single project — even a large one — stays small/large. Program only when a real plurality of related projects exists or is clearly foreseeable. Pull up an existing large project later if needed (umbrella on top, no rebuild).
+
+---
+
+### ⚠️ Leanness / Anti-clutter (mandatory — all project sizes)
+
+Structure should be **flat and lean**. Deep folder trees cost exactly the findability the whole system exists for (layperson test: can you find the file in ≤ 2 clicks?). Especially important when **different AI assistants** work in one project — some like to create temporary intermediate files, dump folders, and deep folder chains ("clutter tails") that junk up the project root. That's precisely what the **workbench** is for (see above): temporary stuff belongs there, not in the root. Binding rules:
+
+1. **A folder only pays off from ~5 files onward.** Below that → **keep it flat + a descriptive name prefix** (date/topic), no folder.
+2. **Never one folder per single item.** Similar bulk files (transcripts, receipts, exports, daily videos) live **flat in ONE folder, date-/ID-prefixed, with a `000-INDEX` file** — **not** a subfolder per piece, and certainly no subfolder-in-subfolder.
+3. **No empty or single-file wrapper folders** (`transcripts/` around one file, an empty `suggestions/`). A single file sits directly in the parent folder.
+4. **Prefer broad over deep.** Every extra folder level must justify itself — when in doubt, one level fewer.
+5. **For bulk imports (e.g. video transcripts):** file flat first + index; only introduce structure when a group really has > 5 files **and** its own project nature.
+
+> This is the build-side counterpart of the review principle "No over-engineering" (`/project-review`).
 
 ---
 
@@ -624,7 +644,7 @@ In these cases, a **Meta-Procedure Document (Letter G)** pays off — it describ
 
 #### Pattern D: Multi-Channel Project (4-6 distribution channels)
 
-Many TDB projects are **multi-channel products**: one core asset distributed across 4-6 different channels — e.g. a freebie as PDF, skill, ebook, video, funnel AND website. Typical cases:
+Many projects are **multi-channel products**: one core asset distributed across 4-6 different channels — e.g. a freebie as PDF, skill, ebook, video, funnel AND website. Typical cases:
 - Freebies with multiple distribution paths
 - Launches (PR, ads, newsletter, affiliate, social, event)
 - Content series (blog, video, podcast, newsletter, social clips)
@@ -710,7 +730,7 @@ Many TDB projects are **multi-channel products**: one core asset distributed acr
 **How to add to the task list:**
 
 ```
-| [PRE]-XX | 👁️ Perspective shift: [Project-specific name] | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟡 | Gregor: review | 🟢 | — | ⬜ Open |
+| [PRE]-XX | 👁️ Perspective shift: [Project-specific name] | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟡 | Boss: review | 🟢 | — | ⬜ Open |
 ```
 
 For larger projects as own mini-phase (example):
@@ -722,10 +742,10 @@ For larger projects as own mini-phase (example):
 
 | No | Task | Claude | Impact | Effort | Needs | Risk | Rollback | Status |
 |---|---|---|---|---|---|---|---|---|
-| POST-01 | 👁️ Walk through customer journey (view: [target audience]) | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟡 | Gregor: review | 🟢 | — | ⬜ Open |
-| POST-02 | 👁️ Wow-effect check: Is there an element that excites? | ✅ | 🔴 | 💰🟢 ⏰🟢 💚🟢 | Gregor: review | 🟢 | — | ⬜ Open |
+| POST-01 | 👁️ Walk through customer journey (view: [target audience]) | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟡 | Boss: review | 🟢 | — | ⬜ Open |
+| POST-02 | 👁️ Wow-effect check: Is there an element that excites? | ✅ | 🔴 | 💰🟢 ⏰🟢 💚🟢 | Boss: review | 🟢 | — | ⬜ Open |
 | POST-03 | 👁️ Check all links/CTAs | ✅ | 🟡 | 💰🟢 ⏰🟢 💚🟢 | — | 🟢 | — | ⬜ Open |
-| POST-04 | 👁️ "Who is that?" check: sender clear? funnel logical? | ✅ | 🟡 | 💰🟢 ⏰🟢 💚🟢 | Gregor: review | 🟢 | — | ⬜ Open |
+| POST-04 | 👁️ "Who is that?" check: sender clear? funnel logical? | ✅ | 🟡 | 💰🟢 ⏰🟢 💚🟢 | Boss: review | 🟢 | — | ⬜ Open |
 | POST-05 | 🔧 Fix all findings | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟡 | — | 🟡 | Revert | ⬜ Open |
 | ◆ | **Milestone: Goal verification passed — no customer stumbles** | | | | | | | ⬜ Open |
 ```
@@ -782,4 +802,6 @@ For larger projects as own mini-phase (example):
 - **Language:** German (default) or English (when project requires it — e.g. international team or customer-facing English content). Specify in CLAUDE.md per project.
 - **Files for external delivery:** Always PDF, never DOCX
 - **Voice-input typos:** User often uses voice input — domains, email addresses, technical terms always cross-check
-- **Don't over-engineer:** Only create what's needed. Better start lean and expand as needed.
+- **Don't over-engineer:** Only create what's needed. Better start lean and expand as needed. → **Leanness / Anti-clutter** (own section): no folder under ~5 files, never one folder per single item, no empty wrappers, bulk files flat + `000-INDEX`, prefer broad over deep.
+- **Workbench, not clutter:** For large projects, temporary files (test outputs, dumps, throwaway scripts) go ONLY into the `[NN]-Workbench/` folder — never into the project root. Empty it once done (put-back duty).
+- **Register, don't island:** Enter every new project at the level above (structure table + changelog log) and check for number collisions BEFORE assigning — reserving placeholder notes count too.

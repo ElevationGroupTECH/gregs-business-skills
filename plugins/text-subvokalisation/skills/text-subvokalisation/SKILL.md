@@ -141,4 +141,4 @@ So wird der Skill mit jedem Einsatz schärfer. Lieber eine kleine Verbesserung z
 
 | Datum | Was verbessert | Auslöser |
 |-------|----------------|----------|
-| 23.05.2026 | Neue Regel 4: Zahlen als Zahlen (nicht ausgeschrieben). Qualitätscheck ergänzt. | Folien Session 05: „zwei Stunden, zwei Themen" → „2 Stunden · 2 Themen". Feedback Gregor. |
+| 23.05.2026 | Neue Regel 4: Zahlen als Zahlen (nicht ausgeschrieben). Qualitätscheck ergänzt. | Folien-Praxis: „zwei Stunden, zwei Themen" → „2 Stunden · 2 Themen". Nutzer-Feedback. |

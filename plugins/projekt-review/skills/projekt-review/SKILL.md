@@ -45,7 +45,7 @@ Zuerst ein vollständiges Bild aufbauen, **bevor** irgendwas verändert wird.
 Die CLAUDE.md lesen und prüfen:
 
 - **Existiert sie?** Wenn nicht → schwerwiegendes Finding
-- **Ist sie kurz genug?** Die CLAUDE.md wird bei jedem Gesprächsstart geladen. Sie sollte knapp und präzise sein — Richtwert: unter 80 Zeilen. Alles was länger ist, verbraucht unnötig Kontext-Fenster.
+- **Ist sie kurz genug?** Die CLAUDE.md wird bei jedem Gesprächsstart geladen. Sie sollte knapp und präzise sein — Richtwert: unter 200 Zeilen. Alles deutlich darüber verbraucht unnötig Kontext-Fenster. Wenn die CLAUDE.md gut und dicht geschrieben ist, ist eine Länge bis ~200 Zeilen (bei großen Projekten) völlig in Ordnung — nicht um des Kürzens willen kürzen.
 - **Stimmt die Dateiübersicht?** Werden alle tatsächlich vorhandenen Projektdateien aufgelistet? Fehlen welche? Werden Dateien erwähnt, die gar nicht mehr existieren?
 - **Stimmen die Regeln?** Wird auf die richtigen Dateien verwiesen? Sind Pfade korrekt?
 - **Gibt es eine Projektreview-Regel?** (Nach 10 Aufgaben → Review)
@@ -96,7 +96,7 @@ Bei jedem Widerspruch: Die Quelle der Wahrheit identifizieren (meist die Aufgabe
 >
 > Ein Projekt kann Hochglanz-100% sein und trotzdem an homöopathischen Mikro-Optimierungen scheitern, während die Riesen-Hebel unangetastet liegen. Diese Dimension wird daher **separat bewertet** — als 0-2 Punkte zusätzlich zum Hochglanz-Score, weil sie eine **strategische Frage** ist, keine Hygiene-Frage.
 
-**Das Prinzip kurz (für Claude-Instanzen ohne TDB-Kontext):**
+**Das Prinzip kurz (für Instanzen ohne Vorkontext):**
 > **Wert = Impact ÷ Ressourcen (Geld + Zeit + Emotionen)**
 >
 > Drei Ressourcen-Dimensionen, nicht zwei. Emotionen (Nerv-Faktor, Energie, Sicherheit) sind die am häufigsten unterschätzte Ressource.
@@ -119,7 +119,7 @@ Bei jedem Widerspruch: Die Quelle der Wahrheit identifizieren (meist die Aufgabe
 3. **Werden Hype-Argumente identifiziert und benannt?**
    - Gibt es im Entscheidungslog Einträge der Art „verworfen, weil kein konkretes Problem gelöst"?
    - Oder werden Aufgaben akzeptiert nur weil sie „Industriestandard" / „cool" / „sollte man" sind?
-   - Achten auf Indikatoren in Protokoll und Entscheidungen: „löst kein konkretes Problem", „Frau-Test", „Compound", „Opportunitätskosten"
+   - Achten auf Indikatoren in Protokoll und Entscheidungen: „löst kein konkretes Problem", „DAU-Test", „Compound", „Opportunitätskosten"
 
 4. **Ist „nicht implementieren" eine sichtbare Option?**
    - Gibt es Aufgaben mit Status „verworfen" oder „bewusst nicht gemacht"?
@@ -164,6 +164,8 @@ Bei jedem Widerspruch: Die Quelle der Wahrheit identifizieren (meist die Aufgabe
 - **Temporäre Dateien:** `.tmp`, `.bak`, Lock-Dateien, `node_modules` die nicht hingehören, etc.
 - **Passt die Ordnerstruktur zum Projekt?** Sind die thematischen Ordner noch sinnvoll, oder hat sich das Projekt in eine andere Richtung entwickelt?
 - **Gewachsene Dateien:** Gibt es einzelne Dateien, die unverhältnismäßig groß geworden sind (>300 Zeilen) und aufgeteilt werden sollten?
+- **Anti-Rattenschwanz:** Tiefe Ordnerketten, ein Ordner pro Einzel-Item, leere Wrapper-Ordner, Massen-Dateien ohne `000-INDEX`? Besonders nach der Arbeit verschiedener KI-Assistenten sammeln sich gern temporäre Zwischendateien im Projektstamm — die gehören in die Werkbank oder nach `xold/`.
+- **Werkbank:** Existiert bei großen Projekten ein `[NN]-Werkbank/`-Ordner? Ist er nach der letzten Arbeit geleert (nur Temporäres, nichts Dauerhaftes)? Volle Werkbank → jetzt leeren.
 
 ### Ebene 4: Programm-Ebene (nur bei Programmen)
 
@@ -273,7 +275,7 @@ Den Review-Bericht direkt im Chat ausgeben. Struktur:
 **Die 5 Kategorien im Detail:**
 
 **🏗️ Struktur** (max 2.0) — Das Skelett: Existiert die richtige Form?
-- CLAUDE.md vorhanden, kurz genug (<80 Zeilen), Regeln korrekt?
+- CLAUDE.md vorhanden, kurz genug (<200 Zeilen), Regeln korrekt?
 - Projekt-Typ erkennbar (Buchstaben/Nummern)? Dateien richtig benannt?
 - Ordner-Hierarchie sinnvoll? xold/ vorhanden?
 - Dateiübersicht in CLAUDE.md stimmt mit Dateisystem überein?
@@ -463,4 +465,4 @@ So wird der Skill mit jedem Einsatz schärfer. Lieber eine kleine Verbesserung z
 
 | Datum | Was verbessert | Auslöser |
 |-------|----------------|----------|
-| — | (noch keine Einträge) | — |
+| 2026-06-02 | CLAUDE.md-Richtwert von <80 auf <200 Zeilen angehoben (+ Hinweis: gute dichte CLAUDE.md nicht um des Kürzens willen kürzen) | Nutzer-Feedback: 80 Zeilen für ein großes Projekt unrealistisch |

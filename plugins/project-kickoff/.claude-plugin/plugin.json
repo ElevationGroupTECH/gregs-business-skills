@@ -3,7 +3,7 @@
   "displayName": "Project Kickoff",
   "description": "Set up a new project properly — small project, large project, or program (umbrella level with subprojects). With project description, changelog, CLAUDE.md, and clean structure. English version.",
   "language": "en",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "skills": [
     "skills/project-kickoff"
   ]

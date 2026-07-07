@@ -1,0 +1,10 @@
+{
+  "name": "text-impact-filter",
+  "displayName": "Text Impact Filter",
+  "description": "Analyzes any text sentence by sentence for emotional impact — with a 5-level color scale. Finds filler sentences, weak spots, and delivers a polished text that lands. English version.",
+  "language": "en",
+  "version": "2.0.0",
+  "skills": [
+    "skills/text-impact-filter"
+  ]
+}

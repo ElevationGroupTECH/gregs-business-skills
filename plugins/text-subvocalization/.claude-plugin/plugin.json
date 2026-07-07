@@ -1,0 +1,10 @@
+{
+  "name": "text-subvocalization",
+  "displayName": "Text Subvocalization",
+  "description": "Optimizes all non-body-text elements — buttons, headlines, lists, labels, CTAs, subject lines — for fast visual scanning without inner read-along. English version.",
+  "language": "en",
+  "version": "2.0.0",
+  "skills": [
+    "skills/text-subvocalization"
+  ]
+}

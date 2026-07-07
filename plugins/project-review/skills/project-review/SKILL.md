@@ -50,7 +50,7 @@ First build a complete picture, **before** changing anything.
 Read and check the CLAUDE.md:
 
 - **Does it exist?** If not → critical finding
-- **Is it concise enough?** The CLAUDE.md gets loaded at every conversation start. It should be brief and precise — target: under 80 lines. Anything longer wastes context window.
+- **Is it concise enough?** The CLAUDE.md gets loaded at every conversation start. It should be brief and precise — target: under 200 lines. Anything well above that wastes context window unnecessarily. When the CLAUDE.md is well and densely written, a length up to ~200 lines (for large projects) is completely fine — don't shorten for the sake of shortening.
 - **Is the file overview accurate?** Are all actually existing project files listed? Are any missing? Are files mentioned that no longer exist?
 - **Are the rules correct?** Do they reference the right files? Are paths correct?
 - **Is there a project review rule?** (After 10 tasks → review)
@@ -101,7 +101,7 @@ For every contradiction: Identify the source of truth (usually the tasks file or
 >
 > A project can be at 100% polish and still fail at homeopathic micro-optimizations while the massive levers sit untouched. This dimension is therefore **scored separately** — as 0-2 points on top of the Polish Score, because it's a **strategic question**, not a hygiene question.
 
-**The principle in brief (for Claude instances without TDB context):**
+**The principle in brief (for Claude instances without prior context):**
 > **Value = Impact ÷ Resources (Money + Time + Emotion)**
 >
 > Three resource dimensions, not two. Emotion (mental drag, energy, security) is the most underestimated resource.
@@ -124,7 +124,7 @@ For every contradiction: Identify the source of truth (usually the tasks file or
 3. **Are hype arguments identified and called out?**
    - Are there decision-log entries of the kind "rejected because it solved no concrete problem"?
    - Or are tasks accepted just because they're "industry standard" / "cool" / "you should"?
-   - Watch for indicators in changelog and decisions: "solves no concrete problem", "wife test", "compound", "opportunity costs"
+   - Watch for indicators in changelog and decisions: "solves no concrete problem", "layperson test", "compound", "opportunity costs"
 
 4. **Is "don't implement" a visible option?**
    - Are there tasks with status "rejected" or "consciously not done"?
@@ -169,6 +169,8 @@ For every contradiction: Identify the source of truth (usually the tasks file or
 - **Temporary files:** `.tmp`, `.bak`, lock files, `node_modules` that don't belong, etc.
 - **Does the folder structure fit the project?** Are thematic folders still sensible, or has the project evolved in a different direction?
 - **Overgrown files:** Are there individual files that have grown disproportionately large (>300 lines) and should be split?
+- **Anti-clutter:** Deep folder chains, one folder per single item, empty wrapper folders, bulk files without a `000-INDEX`? Especially after different AI assistants have worked here, temporary intermediate files tend to pile up in the project root — those belong in the workbench or in `xold/`.
+- **Workbench:** For large projects, does a `[NN]-Workbench/` folder exist? Is it emptied after the last work (only temporary things, nothing permanent)? A full workbench → empty it now.
 
 ### Layer 4: Program Level (programs only)
 
@@ -278,7 +280,7 @@ Output the review report directly in chat. Structure:
 **The 5 Categories in Detail:**
 
 **🏗️ Structure** (max 2.0) — The skeleton: Does the right form exist?
-- CLAUDE.md present, concise enough (<80 lines), rules correct?
+- CLAUDE.md present, concise enough (<200 lines), rules correct?
 - Project type recognizable (letters/numbers)? Files named correctly?
 - Folder hierarchy sensible? xold/ present?
 - File overview in CLAUDE.md matches the file system?
@@ -468,4 +470,4 @@ That way the skill gets sharper with every use. Better one small improvement too
 
 | Date | What improved | Trigger |
 |------|---------------|---------|
-| — | (no entries yet) | — |
+| 2026-06-02 | CLAUDE.md target raised from <80 to <200 lines (+ note: don't shorten a good dense CLAUDE.md for the sake of shortening) | User feedback: 80 lines unrealistic for a large project |

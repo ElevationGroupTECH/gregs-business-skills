@@ -6,13 +6,18 @@
   "homepage": "https://www.teiledeinebotschaft.de",
   "repository": "https://github.com/ElevationGroupTECH/gregs-business-skills",
   "license": "Apache-2.0",
-  "languages": ["de", "en"],
+  "languages": [
+    "de",
+    "en"
+  ],
   "plugins": [
     "plugins/projekt-starten",
     "plugins/project-kickoff",
     "plugins/projekt-review",
     "plugins/project-review",
     "plugins/text-wirkungsfilter",
-    "plugins/text-subvokalisation"
+    "plugins/text-impact-filter",
+    "plugins/text-subvokalisation",
+    "plugins/text-subvocalization"
   ]
 }

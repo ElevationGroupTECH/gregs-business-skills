@@ -5,7 +5,7 @@ description: Neues Projekt sauber aufsetzen — Struktur, Beschreibung, Protokol
 
 # Projekt Starten
 
-Dieser Skill richtet ein neues Projekt sauber ein — mit Projektbeschreibung, Protokolldatei, CLAUDE.md und ordentlicher Struktur. Basiert auf der Methodik aus „KI im Onlinebusiness Session 04" (Gregor Dorsch, 16.03.2026).
+Dieser Skill richtet ein neues Projekt sauber ein — mit Projektbeschreibung, Protokolldatei, CLAUDE.md und ordentlicher Struktur. Basiert auf einer bewährten Methodik zum sauberen Aufsetzen von Business-Projekten mit KI.
 
 > **Teil eines Paares:** Dieser Skill startet Projekte sauber. Sein Partner `/projekt-review` (Alias `/review-project`) hält sie sauber — mit Hochglanz-Score, automatischen Fixes und ehrlichem Feedback. Zusammen bilden sie einen Kreislauf: Starten → Arbeiten → Review → Aufräumen → Weiterarbeiten.
 
@@ -22,7 +22,7 @@ Wert = Impact (Auswirkung auf das Geschäftsziel) ÷ Ressourcen (Geld + Zeit + E
 ### Drei Ressourcen-Dimensionen — bei jeder Aufgabenbewertung mitdenken
 
 1. **💰 Geld** — Lizenzen, Tools, externe Dienstleister, Anschaffungen
-2. **⏰ Zeit** — Gregor, Nadine, Team, Wartung, Übergabe, Lernkurve
+2. **⏰ Zeit** — du, dein Team, Wartung, Übergabe, Lernkurve
 3. **💚 Emotionen** — Nerv-Faktor, Frust, Energie. **Die am häufigsten unterschätzte Ressource.** Wenn Arbeit nervt oder ein Setup fragil und kompliziert ist, zerstört das mehr Wert, als jede Geld-Ersparnis je bringen kann.
 
 ### Impact-Hierarchie
@@ -33,11 +33,11 @@ Wert = Impact (Auswirkung auf das Geschäftsziel) ÷ Ressourcen (Geld + Zeit + E
 
 ### Zusatzfilter
 
-- **Frau-Test:** Könnte Nadine das im Notfall ohne Gregor bedienen? → wenn nein, Komplexität reduzieren.
+- **DAU-Test** (DAU = „dümmster anzunehmender User", ein Begriff aus der Softwareentwicklung): Könnte jemand ganz ohne Vorwissen das im Notfall bedienen? → wenn nein, Komplexität reduzieren.
 - **Compound-Effekte:** Manche Hebel multiplizieren sich (SEO × Content × Backlinks). Die zuerst.
 - **Opportunitätskosten:** Was machen wir NICHT, wenn wir das machen?
 - **Whole-System-Optimierung:** Wirkt das aufs ganze System, oder nur auf eine Komponente, die eh schon gut war?
-- **Wer macht die Arbeit?** Gregor/Nadine = teuer. Claude = nachts kostenlos. Automatisiert > einmalig.
+- **Wer macht die Arbeit?** Du/dein Team = teuer. Claude = rund um die Uhr und günstig. Automatisiert > einmalig.
 
 ### Konsequenz für jedes neu angelegte Projekt
 
@@ -101,7 +101,7 @@ Das ist der wichtigste Schritt. Der User wird typischerweise eine **Sprachnachri
    - **Nicht nur referenzieren — tatsächlich in `04-Quellen/` (oder entsprechendem Unterordner) als strukturierte `.md`-Datei sichern:**
      - Namensschema: `YYYY-MM-DD-Speak-Transkript-[Kurztitel].md`
      - Aufbau: Frontmatter (ID, Datum, Sprecher), Zusammenfassung der Kernaussagen, Zitate-Block (fürs Marketing), Volltext-Referenz
-   - Sprecher identifizieren (Gregor ist meist Speaker 1) und in der Zusammenfassung mit Namen belegen, soweit ableitbar
+   - Sprecher identifizieren (der Projektinhaber ist meist Speaker 1) und in der Zusammenfassung mit Namen belegen, soweit ableitbar
    - Als Quellmaterial in `A - Projektbeschreibung` und `D - Methodik` (oder passende Dokumente) referenzieren
 
    **Warum sichern statt nur referenzieren?** Transkript-IDs können sich ändern, die Speak-App kann offline sein, und das Projekt soll sich auch ohne Speak-Zugriff selbst erklären. Einmaliges Kopieren ins Projekt stabilisiert die Quelle.
@@ -183,6 +183,8 @@ Bei großen Projekten mit thematischen Unterordnern kollidieren nummerierte Root
 
 **Regel:** Die Buchstaben-Dateien (A, B, C...) sind die Dokumente, die Claude bei jedem Gesprächsstart liest. Nummern (01-, 02-...) sind für die Unterordner.
 
+**Werkbank-Ordner (Pflicht bei großen Projekten):** Bei jedem großen Projekt wird ein nummerierter **Werkbank-Ordner** mit angelegt — als **letzte Nummer** der thematischen Ordner (z.B. `07-Werkbank`, wenn 01–06 vergeben sind). Zweck: der EINZIGE Ort für Vorübergehendes (Test-Screenshots, Snapshot-Dumps, Wegwerf-Skripte, Zwischenergebnisse) — damit die oberste Projektebene sauber bleibt (dort liegen NUR Projektdateien + nummerierte Ordner). Regeln (gehören als `README.md` in die Werkbank): ① nichts Dauerhaftes hier ablegen, ② Hol-Bring-Schuld — wer ablegt, räumt nach Abschluss der Aufgabe weg, ③ nie aus Projektdateien referenzieren, ④ nicht geleerte Werkbank → beim nächsten `/projekt-review` leeren. Unterschied zu `xold/`: Werkbank = aktives Arbeiten, wird sofort geleert; `xold/` = Archiv/Mülleimer-Vorstufe. Bei **kleinen Projekten** (flach) ist die Werkbank optional — nur anlegen, wenn absehbar mit temporären Artefakten gearbeitet wird.
+
 ##### Programm: Übergeordnete Ebene + vollständige Teilprojekte
 
 Ein **Programm** ist die Klammer über mehrere zusammenhängende Projekte (PM-Hierarchie **Portfolio › Programm › Projekt**). Man kann **im Teilprojekt** arbeiten (ein konkretes Projekt weiterführen) **oder im Programm** (übergreifendes Konzept, Nomenklatur, Auswertung, Anlegen neuer Teilprojekte).
@@ -253,7 +255,7 @@ Enthält alles: Aufgaben-Tabellen, Meilensteine, Log-Index, Logs.
 |---|---|---|---|---|---|---|---|---|
 | [PRE]-01 | 📄 Startseite erstellen | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟢 | — | 🟢 | — | ✅ Erledigt |
 | [PRE]-02 | robots.txt konfigurieren | ✅ | 🟡 | 💰🟢 ⏰🟢 💚🟢 | — | 🟢 | Revert | ⬜ Offen |
-| [PRE]-03 | ⚙️ Code-Review Phase 1 | ✅ | 🟡 | 💰🟢 ⏰🟡 💚🟢 | Gregor: Abnahme | 🟢 | — | ⬜ Offen |
+| [PRE]-03 | ⚙️ Code-Review Phase 1 | ✅ | 🟡 | 💰🟢 ⏰🟡 💚🟢 | Chef: Abnahme | 🟢 | — | ⬜ Offen |
 | ◆ | **Meilenstein: [MESSBARES ERGEBNIS]** | | | | | | | ⬜ Offen |
 
 ## Meilensteine (Übersicht)
@@ -296,7 +298,7 @@ Bei großen Projekten wachsen Aufgabenbeschreibungen und Logs unabhängig vonein
 |---|---|---|---|---|---|---|---|---|
 | [PRE]-01 | 📄 Startseite erstellen | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟢 | — | 🟢 | — | ✅ Erledigt |
 | [PRE]-02 | ⚙️ Komplexe Komponente (→ siehe Aufgabenbeschreibung) | ✅ | 🔴 | 💰🟢 ⏰🔴 💚🟡 | — | 🟡 | Revert | ⬜ Offen |
-| [PRE]-03 | ⚙️ Code-Review Phase 1 | ✅ | 🟡 | 💰🟢 ⏰🟡 💚🟢 | Gregor: Abnahme | 🟢 | — | ⬜ Offen |
+| [PRE]-03 | ⚙️ Code-Review Phase 1 | ✅ | 🟡 | 💰🟢 ⏰🟡 💚🟢 | Chef: Abnahme | 🟢 | — | ⬜ Offen |
 | ◆ | **Meilenstein: [MESSBARES ERGEBNIS]** | | | | | | | ⬜ Offen |
 
 ## Aufgabenbeschreibungen
@@ -357,7 +359,7 @@ Bei großen Projekten wachsen Aufgabenbeschreibungen und Logs unabhängig vonein
    | Claude | Kann Claude die Aufgabe selbst durchführen? | ✅ = ja, selbständig \| ⚠️ = teilweise (braucht Zuarbeit) \| ❌ = nein (Mensch muss) \| — = nicht zutreffend |
    | Impact | Wie viel trägt die Aufgabe zur Zielerreichung bei? | 🔴 hoch \| 🟡 mittel \| 🟢 niedrig |
    | Aufwand | 3-dimensionale Ressourcen-Schätzung | 💰[Stufe] Geld / ⏰[Stufe] Zeit / 💚[Stufe] Emotion (jeweils 🟢 niedrig / 🟡 mittel / 🔴 hoch) |
-   | Braucht | Wer muss was zuliefern / reviewen / freigeben? | Text (z.B. „Gregor: Review") oder „—" wenn selbständig |
+   | Braucht | Wer muss was zuliefern / reviewen / freigeben? | Text (z.B. „Chef: Review") oder „—" wenn selbständig |
    | Risiko | Wie hoch ist das Risiko, dass etwas kaputt geht? | 🔴 hoch \| 🟡 mittel \| 🟢 gering |
    | Rollback | Was tun, wenn etwas schiefgeht? | Kurzer Text oder „—" wenn risikolos |
 
@@ -439,6 +441,10 @@ Bei größeren Projekten ein Entscheidungslog anlegen. Dokumentiert das **Warum*
 
 #### e) `xold/` — Mülleimer-Ordner (immer anlegen)
 
+#### e2) `[NN]-Werkbank/` — temporärer Arbeitsbereich (bei großen Projekten immer anlegen)
+
+Als **letzter nummerierter Ordner** (nächste freie Nummer nach den thematischen Ordnern) wird eine **Werkbank** angelegt — inkl. `README.md` mit den 4 Regeln (nichts Dauerhaftes · Hol-Bring-Schuld: wer ablegt, räumt weg · nie referenzieren · volle Werkbank wird beim `/projekt-review` geleert). Sie ist der EINZIGE erlaubte Ort für Temporäres (Test-Screenshots, Dumps, Wegwerf-Skripte) — die oberste Projektebene bleibt dadurch dauerhaft sauber. Werkbank ≠ `xold/` (Werkbank = aktive Session-Ablage, sofort leeren; `xold/` = Mülleimer-Vorstufe). Bei kleinen (flachen) Projekten optional.
+
 #### Zusätzliche Dateien je nach Bedarf:
 
 Weitere Dateien werden fortlaufend nummeriert (klein: `03-...`, `04-...` / groß: `C -`, `D -` etc.).
@@ -517,6 +523,20 @@ Mehrere zusammenhängende Projekte unter einer Klammer. Die Programm-Ebene träg
 **Wann Programm?** Eine Reihe gleichartiger Projekte (Case-Study-Serie, Buchreihe, mehrere Kundenprojekte unter einem Dach, Produktbereich mit Teilprodukten) — wenn ein gemeinsames Konzept/Nomenklatur/Output über mehrere Projekte hinweg gepflegt werden muss.
 
 **Wann NICHT?** Einzelnes Projekt — auch ein großes — bleibt klein/groß. Programm nur, wenn echte Mehrzahl zusammenhängender Projekte existiert oder klar absehbar ist. Bestehendes großes Projekt bei Bedarf später **hochziehen** (Klammer drüber, nicht umbauen).
+
+---
+
+### ⚠️ Schlankheit / Anti-Rattenschwanz (Pflicht — alle Projektgrößen)
+
+Struktur soll **flach und schlank** sein. Tiefe Ordnerbäume kosten genau die Auffindbarkeit, für die das ganze System existiert (DAU-Test: Findet man die Datei in ≤ 2 Klicks?). Besonders wichtig, wenn **verschiedene KI-Assistenten** in einem Projekt arbeiten — manche legen gern temporäre Zwischendateien, Dump-Ordner und tiefe Ordnerketten an („Rattenschwänze"), die den Projektstamm zumüllen. Genau dafür gibt es die **Werkbank** (siehe oben): temporäres Zeug gehört dort hinein, nicht in den Stamm. Verbindliche Regeln:
+
+1. **Ein Ordner lohnt sich erst ab ~5 Dateien.** Darunter → **flach lassen + sprechendes Namens-Präfix** (Datum/Thema), kein Ordner.
+2. **Niemals ein Ordner pro Einzel-Item.** Gleichartige Massen-Dateien (Transkripte, Belege, Exporte, Tagesvideos) liegen **flach in EINEM Ordner, datums-/ID-präfixiert, mit einer `000-INDEX`-Datei** — **nicht** je ein Unterordner pro Stück, erst recht kein Unterordner-im-Unterordner.
+3. **Keine leeren oder Ein-Datei-Wrapper-Ordner** (`transcripts/` um eine Datei, leere `suggestions/`). Eine einzelne Datei steht direkt im übergeordneten Ordner.
+4. **Lieber breit als tief.** Jede zusätzliche Ordnerebene muss sich rechtfertigen — im Zweifel eine Ebene weniger.
+5. **Bei Bulk-Importen (z. B. Video-Transkripte):** erst flach ablegen + Index; Struktur nur einziehen, wenn eine Gruppe real > 5 Dateien **und** eigene Projektnatur hat.
+
+> Das ist die Bau-Variante des Review-Prinzips „Kein Overengineering" (`/projekt-review`).
 
 ---
 
@@ -624,7 +644,7 @@ In diesen Fällen lohnt sich ein **Meta-Verfahren-Dokument (Buchstabe G)**, das 
 
 #### Pattern D: Multi-Channel-Projekt (4-6 Ausspielkanäle)
 
-Viele TDB-Projekte sind **Multi-Channel-Produkte**: ein Kerninhalt, der über 4-6 verschiedene Kanäle ausgespielt wird — z.B. ein Freebie als PDF, Skill, E-Book, Video, Funnel UND Website. Typische Fälle:
+Viele Projekte sind **Multi-Channel-Produkte**: ein Kerninhalt, der über 4-6 verschiedene Kanäle ausgespielt wird — z.B. ein Freebie als PDF, Skill, E-Book, Video, Funnel UND Website. Typische Fälle:
 - Freebies mit mehreren Ausspielwegen
 - Launches (PR, Ads, Newsletter, Affiliate, Social, Event)
 - Content-Serien (Blog, Video, Podcast, Newsletter, Social-Clips)
@@ -710,7 +730,7 @@ Viele TDB-Projekte sind **Multi-Channel-Produkte**: ein Kerninhalt, der über 4-
 **Wie in die Aufgabenliste einbauen:**
 
 ```
-| [PRE]-XX | 👁️ Perspektivwechsel: [Projektspezifischer Name] | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟡 | Gregor: Review | 🟢 | — | ⬜ Offen |
+| [PRE]-XX | 👁️ Perspektivwechsel: [Projektspezifischer Name] | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟡 | Chef: Review | 🟢 | — | ⬜ Offen |
 ```
 
 Bei größeren Projekten als eigene Mini-Phase (Beispiel):
@@ -722,10 +742,10 @@ Bei größeren Projekten als eigene Mini-Phase (Beispiel):
 
 | Nr | Aufgabe | Claude | Impact | Aufwand | Braucht | Risiko | Rollback | Status |
 |---|---|---|---|---|---|---|---|---|
-| POST-01 | 👁️ Customer Journey durchspielen (Sicht: [Zielgruppe]) | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟡 | Gregor: Review | 🟢 | — | ⬜ Offen |
-| POST-02 | 👁️ Wow-Effekt-Check: Gibt es ein Element das begeistert? | ✅ | 🔴 | 💰🟢 ⏰🟢 💚🟢 | Gregor: Review | 🟢 | — | ⬜ Offen |
+| POST-01 | 👁️ Customer Journey durchspielen (Sicht: [Zielgruppe]) | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟡 | Chef: Review | 🟢 | — | ⬜ Offen |
+| POST-02 | 👁️ Wow-Effekt-Check: Gibt es ein Element das begeistert? | ✅ | 🔴 | 💰🟢 ⏰🟢 💚🟢 | Chef: Review | 🟢 | — | ⬜ Offen |
 | POST-03 | 👁️ Alle Links/CTAs prüfen | ✅ | 🟡 | 💰🟢 ⏰🟢 💚🟢 | — | 🟢 | — | ⬜ Offen |
-| POST-04 | 👁️ „Wer ist das?"-Check: Absender klar? Funnel logisch? | ✅ | 🟡 | 💰🟢 ⏰🟢 💚🟢 | Gregor: Review | 🟢 | — | ⬜ Offen |
+| POST-04 | 👁️ „Wer ist das?"-Check: Absender klar? Funnel logisch? | ✅ | 🟡 | 💰🟢 ⏰🟢 💚🟢 | Chef: Review | 🟢 | — | ⬜ Offen |
 | POST-05 | 🔧 Alle Findings fixen | ✅ | 🔴 | 💰🟢 ⏰🟡 💚🟡 | — | 🟡 | Revert | ⬜ Offen |
 | ◆ | **Meilenstein: Zielüberprüfung bestanden — kein Kunde stolpert** | | | | | | | ⬜ Offen |
 ```
@@ -782,4 +802,6 @@ Bei größeren Projekten als eigene Mini-Phase (Beispiel):
 - **Sprache:** Deutsch (Standard) oder Englisch (wenn das Projekt es verlangt — z.B. internationales Team oder kundenseitig englischer Content). In der CLAUDE.md pro Projekt festlegen.
 - **Dateien nach außen:** Immer nur PDF, nie DOCX
 - **Diktierfehler:** User nutzt häufig Diktierfunktion — Domains, E-Mail-Adressen, Fachbegriffe immer gegenchecken
-- **Nicht overengineeren:** Nur anlegen was gebraucht wird. Lieber schlank starten und bei Bedarf erweitern.
+- **Nicht overengineeren:** Nur anlegen was gebraucht wird. Lieber schlank starten und bei Bedarf erweitern. → **Schlankheit / Anti-Rattenschwanz** (eigener Abschnitt): kein Ordner unter ~5 Dateien, nie ein Ordner pro Einzel-Item, keine leeren Wrapper, Massen-Dateien flach + `000-INDEX`, lieber breit als tief.
+- **Werkbank statt Streumüll:** Bei großen Projekten temporäre Dateien (Test-Ausgaben, Dumps, Wegwerf-Skripte) NUR in den `[NN]-Werkbank/`-Ordner — nie in den Projektstamm. Nach Abschluss leeren (Hol-Bring-Schuld).
+- **Registrieren statt Insel:** Jedes neue Projekt in der übergeordneten Ebene eintragen (Struktur-Tabelle + Protokoll-Log) und Nummern-Kollisionen VOR der Vergabe prüfen — auch reservierende Platzhalter-Notizen zählen.

@@ -183,7 +183,7 @@ Bei Büchern und langen Storytelling-Texten ist der Wirkungsfilter ein SEPARATER
 - Feedback einholen: "Ist das gut? Besser? Was fehlt?"
 - Iterieren bis es sitzt
 
-Warum separat bei Büchern? Weil Buchkapitel länger sind, mehr Kontext haben, und der Autor (Gregor) die Wirkungs-Bewertung selbst reviewen will bevor gestrichen wird.
+Warum separat bei Büchern? Weil Buchkapitel länger sind, mehr Kontext haben, und der Autor die Wirkungs-Bewertung selbst reviewen will bevor gestrichen wird.
 
 ---
 

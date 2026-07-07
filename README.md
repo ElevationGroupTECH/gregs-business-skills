@@ -4,7 +4,7 @@
 <td width="160"><img src="assets/gregs-business-skills-hero.png" alt="Greg's Business Skills" width="140"></td>
 <td>
 
-# Greg's Business Skills **v1.3.0**
+# Greg's Business Skills **v2.0.0**
 
 **Wie Neo in Matrix die Kampfkunst — nur in Business-Kunst. Skills einklinken, Struktur downloaden, loslegen.**
 
@@ -88,6 +88,8 @@ plugins/projekt-starten/skills/projekt-starten/SKILL.md           -->  ~/.claude
 plugins/projekt-review/skills/projekt-review/SKILL.md             -->  ~/.claude/commands/projekt-review.md
 plugins/text-wirkungsfilter/skills/text-wirkungsfilter/SKILL.md   -->  ~/.claude/commands/text-wirkungsfilter.md
 plugins/text-subvokalisation/skills/text-subvokalisation/SKILL.md -->  ~/.claude/commands/text-subvokalisation.md
+plugins/text-impact-filter/skills/text-impact-filter/SKILL.md     -->  ~/.claude/commands/text-impact-filter.md
+plugins/text-subvocalization/skills/text-subvocalization/SKILL.md -->  ~/.claude/commands/text-subvocalization.md
 ```
 
 Dann Claude Code neu starten oder `/commands` eingeben zum Prüfen.
@@ -108,6 +110,8 @@ Dann Claude Code neu starten oder `/commands` eingeben zum Prüfen.
 /plugin install text-subvokalisation@gregs-business-skills # Deutsch
 /plugin install project-kickoff@gregs-business-skills      # English
 /plugin install project-review@gregs-business-skills       # English
+/plugin install text-impact-filter@gregs-business-skills   # English
+/plugin install text-subvocalization@gregs-business-skills # English
 ```
 
 Falls das nicht funktioniert --> Weg 1 nutzen.
@@ -197,14 +201,14 @@ Das sind die Skills, die wir täglich nutzen. Praxiserprobt, nicht perfekt. Und 
 
 ## Sprachen
 
-Die Projekt-Skills gibt es auf **Deutsch** und **Englisch**, die Text-Skills aktuell nur auf Deutsch:
+Alle Skills gibt es auf **Deutsch** und **Englisch**:
 
 | Deutsch | English | Beschreibung |
 |---|---|---|
 | `/projekt-starten` | `/project-kickoff` | Neues Projekt — oder Programm — mit sauberer Struktur aufsetzen |
 | `/projekt-review` | `/project-review` | Bestehendes Projekt oder Programm bewerten und auf Hochglanz bringen |
-| `/text-wirkungsfilter` | — | Texte Satz für Satz auf Wirkung analysieren und polieren |
-| `/text-subvokalisation` | — | Buttons, Überschriften, Listen für schnelle Erfassung optimieren |
+| `/text-wirkungsfilter` | `/text-impact-filter` | Texte Satz für Satz auf Wirkung analysieren und polieren |
+| `/text-subvokalisation` | `/text-subvocalization` | Buttons, Überschriften, Listen für schnelle Erfassung optimieren |
 
 ---
 
